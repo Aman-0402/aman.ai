@@ -1,0 +1,211 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ─── Base Layer ──────────────────────────────────────────────── */
+@layer base {
+  :root {
+    --scrollbar-thumb: #2a2a3a;
+    --scrollbar-track: #0a0a0f;
+    scroll-behavior: smooth;
+  }
+
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  html {
+    @apply font-body text-text-primary;
+    font-feature-settings: 'rlig' 1, 'calt' 1, 'ss01' 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+  }
+
+  /* Dark mode default */
+  html.dark body {
+    @apply bg-bg-base text-text-primary;
+  }
+
+  html:not(.dark) body {
+    background-color: #f8fafc;
+    color: #0f172a;
+  }
+
+  /* Selection color */
+  ::selection {
+    background-color: rgba(99, 102, 241, 0.3);
+    color: #f1f5f9;
+  }
+
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    background: var(--scrollbar-track);
+  }
+  ::-webkit-scrollbar-thumb {
+    background: var(--scrollbar-thumb);
+    border-radius: 999px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #6366f1;
+  }
+
+  /* Focus ring */
+  :focus-visible {
+    @apply outline-none ring-2 ring-brand-primary ring-offset-2 ring-offset-bg-base;
+  }
+
+  /* Headings */
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display;
+  }
+
+  /* Code */
+  code {
+    @apply font-mono;
+  }
+
+  /* Links */
+  a {
+    @apply transition-colors duration-200;
+  }
+}
+
+/* ─── Component Layer ─────────────────────────────────────────── */
+@layer components {
+
+  /* Glass card */
+  .glass {
+    background: rgba(26, 26, 37, 0.6);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+  }
+
+  /* Gradient text */
+  .gradient-text {
+    background: linear-gradient(135deg, #6366f1, #22d3ee);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+  }
+
+  /* Section wrapper */
+  .section-container {
+    @apply max-w-content mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  /* Section padding */
+  .section-padding {
+    @apply py-24 lg:py-32;
+  }
+
+  /* Glow effects */
+  .glow-primary {
+    box-shadow: 0 0 40px rgba(99, 102, 241, 0.25);
+  }
+
+  .glow-cyan {
+    box-shadow: 0 0 40px rgba(34, 211, 238, 0.25);
+  }
+
+  /* Animated gradient border */
+  .gradient-border {
+    position: relative;
+    background: linear-gradient(#1a1a25, #1a1a25) padding-box,
+                linear-gradient(135deg, #6366f1, #22d3ee) border-box;
+    border: 1px solid transparent;
+  }
+
+  /* Noise overlay texture */
+  .noise-overlay::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.03'/%3E%3C/svg%3E");
+    pointer-events: none;
+    border-radius: inherit;
+  }
+
+  /* Tag pill */
+  .tag {
+    @apply inline-flex items-center gap-1 px-3 py-1 rounded-full text-xs font-medium
+           bg-bg-elevated text-text-secondary border border-bg-border
+           transition-colors duration-200;
+  }
+
+  .tag-active {
+    @apply bg-brand-primary/10 text-brand-primary border-brand-primary/30;
+  }
+
+  /* Dotted divider */
+  .dotted-line {
+    @apply border-none;
+    background-image: repeating-linear-gradient(
+      90deg,
+      #2a2a3a 0,
+      #2a2a3a 4px,
+      transparent 4px,
+      transparent 12px
+    );
+    height: 1px;
+  }
+}
+
+/* ─── Utility Layer ───────────────────────────────────────────── */
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* Clip path for diagonal section separators */
+  .clip-diagonal {
+    clip-path: polygon(0 0, 100% 0, 100% 92%, 0 100%);
+  }
+
+  .clip-diagonal-reverse {
+    clip-path: polygon(0 8%, 100% 0, 100% 100%, 0 100%);
+  }
+}
+
+/* ─── Typography (prose) overrides for blog ──────────────────── */
+.prose-dark {
+  --tw-prose-body:         #94a3b8;
+  --tw-prose-headings:     #f1f5f9;
+  --tw-prose-lead:         #94a3b8;
+  --tw-prose-links:        #6366f1;
+  --tw-prose-bold:         #f1f5f9;
+  --tw-prose-counters:     #6366f1;
+  --tw-prose-bullets:      #6366f1;
+  --tw-prose-hr:           #2a2a3a;
+  --tw-prose-quotes:       #f1f5f9;
+  --tw-prose-quote-borders:#6366f1;
+  --tw-prose-captions:     #475569;
+  --tw-prose-code:         #22d3ee;
+  --tw-prose-pre-code:     #f1f5f9;
+  --tw-prose-pre-bg:       #1a1a25;
+  --tw-prose-th-borders:   #2a2a3a;
+  --tw-prose-td-borders:   #2a2a3a;
+}
+
+/* ─── Highlight.js theme override ────────────────────────────── */
+.hljs {
+  background: #1a1a25 !important;
+  border-radius: 0.75rem;
+  padding: 1.25rem !important;
+}
