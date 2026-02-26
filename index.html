@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="en" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <!-- Primary Meta Tags -->
+    <title>Aman Raj — Web Developer & AI/ML Expert</title>
+    <meta name="title" content="Aman Raj — Web Developer & AI/ML Expert" />
+    <meta
+      name="description"
+      content="Full-Stack MERN Developer, AI/ML Engineer, Python Expert & Technical Trainer. Building intelligent web products and sharing knowledge through ebooks and blogs."
+    />
+    <meta name="author" content="Aman Raj" />
+    <meta
+      name="keywords"
+      content="Aman Raj, Web Developer, AI ML Expert, MERN Stack, Python Developer, Machine Learning, React Developer, Full Stack Developer, Technical Trainer"
+    />
+
+    <!-- Robots -->
+    <meta name="robots" content="index, follow" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://amanraj.dev/" />
+    <meta property="og:title" content="Aman Raj — Web Developer & AI/ML Expert" />
+    <meta
+      property="og:description"
+      content="Full-Stack MERN Developer, AI/ML Engineer, Python Expert & Technical Trainer. Building intelligent web products."
+    />
+    <meta property="og:image" content="/assets/og/og-default.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:url" content="https://amanraj.dev/" />
+    <meta name="twitter:title" content="Aman Raj — Web Developer & AI/ML Expert" />
+    <meta
+      name="twitter:description"
+      content="Full-Stack MERN Developer, AI/ML Engineer, Python Expert & Technical Trainer."
+    />
+    <meta name="twitter:image" content="/assets/og/og-default.jpg" />
+
+    <!-- Canonical -->
+    <link rel="canonical" href="https://amanraj.dev/" />
+
+    <!-- Favicons -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/png" href="/favicon.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+
+    <!-- Preconnect for performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <!-- Google Fonts — Plus Jakarta Sans + Inter + JetBrains Mono -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Aman Raj",
+        "jobTitle": "Full-Stack Developer & AI/ML Expert",
+        "url": "https://amanraj.dev",
+        "description": "Web Developer, Python & Machine Learning Expert, MERN Stack Developer, Technical Trainer",
+        "sameAs": [
+          "https://github.com/amanraj",
+          "https://linkedin.com/in/amanraj",
+          "https://twitter.com/amanraj"
+        ],
+        "knowsAbout": [
+          "React", "Node.js", "Python", "Machine Learning",
+          "MongoDB", "Express.js", "TailwindCSS", "AI Engineering"
+        ]
+      }
+    </script>
+
+    <!--
+      SPA Routing Fix for GitHub Pages.
+      Step 2 of 2: Decode the redirect injected by 404.html back into a real URL
+      and push it into browser history BEFORE React Router initialises.
+      Without this, refreshing /projects would render the app at /?/projects
+      instead of /projects, breaking all deep links and shared URLs.
+
+      Pairs with: public/404.html (the encoder)
+      Source: https://github.com/rafgraph/spa-github-pages
+    -->
+    <script>
+      ;(function (l) {
+        if (l.search[1] === '/') {
+          var decoded = l.search
+            .slice(1)
+            .split('&')
+            .map(function (s) { return s.replace(/~and~/g, '&') })
+            .join('?')
+          window.history.replaceState(
+            null,
+            null,
+            l.pathname.slice(0, -1) + decoded + l.hash
+          )
+        }
+      })(window.location)
+    </script>
+
+    <!-- Theme: prevent flash of wrong theme -->
+    <script>
+      ;(function () {
+        const stored = localStorage.getItem('theme')
+        const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches
+        if (stored === 'dark' || (!stored && prefersDark)) {
+          document.documentElement.classList.add('dark')
+        } else if (stored === 'light') {
+          document.documentElement.classList.remove('dark')
+        }
+      })()
+    </script>
+    <script type="module" crossorigin src="/assets/index-BEvwDYAH.js"></script>
+    <link rel="modulepreload" crossorigin href="/assets/vendor-Cnx9rnkG.js">
+    <link rel="modulepreload" crossorigin href="/assets/motion-BgdYMpg9.js">
+    <link rel="stylesheet" crossorigin href="/assets/index-BMrkBShh.css">
+  </head>
+  <body class="bg-bg-base text-text-primary font-body antialiased">
+    <div id="root"></div>
+  </body>
+</html>
