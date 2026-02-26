@@ -19,7 +19,12 @@ const ContactPage      = lazy(() => import('@pages/ContactPage'))
 const NotFoundPage     = lazy(() => import('@pages/NotFoundPage'))
 
 // ─── Router configuration ─────────────────────────────────────────────────────
-const router = createBrowserRouter([
+// import.meta.env.BASE_URL is injected by Vite from the `base` option.
+// Locally it's '/', on GitHub Pages subdomain it's '/aman.ai/'.
+// Without this basename, React Router starts at '/' while the HTML is served
+// at '/aman.ai/' — no routes match and the screen stays blank.
+const router = createBrowserRouter(
+  [
   {
     path: '/',
     element: <RootLayout />,
@@ -130,7 +135,9 @@ const router = createBrowserRouter([
       },
     ],
   },
-])
+  ],
+  { basename: import.meta.env.BASE_URL }
+)
 
 // ─── App root ─────────────────────────────────────────────────────────────────
 export default function App() {
