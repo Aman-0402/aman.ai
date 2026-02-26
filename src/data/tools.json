@@ -1,0 +1,385 @@
+{
+  "categories": [
+    {
+      "id": "ai-tools",
+      "label": "AI Tools",
+      "icon": "Brain",
+      "color": "#6366F1",
+      "tools": [
+        {
+          "id": "ai-001",
+          "name": "ChatGPT",
+          "description": "Conversational AI by OpenAI. Best for coding help, writing, and research.",
+          "url": "https://chat.openai.com",
+          "emoji": "🤖",
+          "category": "ai-tools",
+          "tags": ["LLM", "Chat", "Coding"],
+          "pricing": "freemium",
+          "rating": 5,
+          "featured": true,
+          "addedAt": "2024-01-01"
+        },
+        {
+          "id": "ai-002",
+          "name": "Claude",
+          "description": "Anthropic's AI assistant. Excellent for long-context tasks and analysis.",
+          "url": "https://claude.ai",
+          "emoji": "🧠",
+          "category": "ai-tools",
+          "tags": ["LLM", "Chat", "Analysis"],
+          "pricing": "freemium",
+          "rating": 5,
+          "featured": true,
+          "addedAt": "2024-01-01"
+        },
+        {
+          "id": "ai-003",
+          "name": "GitHub Copilot",
+          "description": "AI pair programmer that suggests code in real-time inside your editor.",
+          "url": "https://github.com/features/copilot",
+          "emoji": "👾",
+          "category": "ai-tools",
+          "tags": ["Coding", "IDE", "Autocomplete"],
+          "pricing": "paid",
+          "rating": 5,
+          "featured": true,
+          "addedAt": "2024-01-01"
+        },
+        {
+          "id": "ai-004",
+          "name": "Perplexity AI",
+          "description": "AI-powered search engine with citations. Great for research.",
+          "url": "https://perplexity.ai",
+          "emoji": "🔍",
+          "category": "ai-tools",
+          "tags": ["Search", "Research", "LLM"],
+          "pricing": "freemium",
+          "rating": 4,
+          "featured": false,
+          "addedAt": "2024-02-01"
+        },
+        {
+          "id": "ai-005",
+          "name": "Midjourney",
+          "description": "AI image generation via Discord. Produces stunning artistic images.",
+          "url": "https://midjourney.com",
+          "emoji": "🎨",
+          "category": "ai-tools",
+          "tags": ["Image", "Design", "Generative"],
+          "pricing": "paid",
+          "rating": 5,
+          "featured": false,
+          "addedAt": "2024-01-15"
+        },
+        {
+          "id": "ai-006",
+          "name": "v0 by Vercel",
+          "description": "AI that generates React/Tailwind UI components from text prompts.",
+          "url": "https://v0.dev",
+          "emoji": "⚡",
+          "category": "ai-tools",
+          "tags": ["UI", "React", "Code Generation"],
+          "pricing": "freemium",
+          "rating": 4,
+          "featured": false,
+          "addedAt": "2024-03-01"
+        }
+      ]
+    },
+    {
+      "id": "ui-ux-tools",
+      "label": "UI/UX Tools",
+      "icon": "Palette",
+      "color": "#EC4899",
+      "tools": [
+        {
+          "id": "ux-001",
+          "name": "Figma",
+          "description": "Industry-standard collaborative UI design tool. Free for individuals.",
+          "url": "https://figma.com",
+          "emoji": "🖼️",
+          "category": "ui-ux-tools",
+          "tags": ["Design", "Prototyping", "Collaboration"],
+          "pricing": "freemium",
+          "rating": 5,
+          "featured": true,
+          "addedAt": "2024-01-01"
+        },
+        {
+          "id": "ux-002",
+          "name": "Coolors",
+          "description": "Super fast color palette generator. Perfect for brand color schemes.",
+          "url": "https://coolors.co",
+          "emoji": "🎨",
+          "category": "ui-ux-tools",
+          "tags": ["Colors", "Palette", "Branding"],
+          "pricing": "freemium",
+          "rating": 5,
+          "featured": true,
+          "addedAt": "2024-01-01"
+        },
+        {
+          "id": "ux-003",
+          "name": "Mobbin",
+          "description": "Library of 50,000+ mobile & web UI screenshots for design inspiration.",
+          "url": "https://mobbin.com",
+          "emoji": "📱",
+          "category": "ui-ux-tools",
+          "tags": ["Inspiration", "UI Patterns", "Reference"],
+          "pricing": "freemium",
+          "rating": 4,
+          "featured": false,
+          "addedAt": "2024-01-01"
+        },
+        {
+          "id": "ux-004",
+          "name": "Spline",
+          "description": "3D design tool for the web. Create 3D scenes that run in the browser.",
+          "url": "https://spline.design",
+          "emoji": "🌀",
+          "category": "ui-ux-tools",
+          "tags": ["3D", "Web", "Interactive"],
+          "pricing": "freemium",
+          "rating": 4,
+          "featured": false,
+          "addedAt": "2024-02-01"
+        }
+      ]
+    },
+    {
+      "id": "frontend-tools",
+      "label": "Frontend Tools",
+      "icon": "Code",
+      "color": "#22D3EE",
+      "tools": [
+        {
+          "id": "fe-001",
+          "name": "TailwindCSS",
+          "description": "Utility-first CSS framework. The fastest way to build modern UIs.",
+          "url": "https://tailwindcss.com",
+          "emoji": "💨",
+          "category": "frontend-tools",
+          "tags": ["CSS", "Framework", "Utility"],
+          "pricing": "free",
+          "rating": 5,
+          "featured": true,
+          "addedAt": "2024-01-01"
+        },
+        {
+          "id": "fe-002",
+          "name": "Framer Motion",
+          "description": "Production-ready animation library for React. Powers this very site.",
+          "url": "https://framer.com/motion",
+          "emoji": "🎬",
+          "category": "frontend-tools",
+          "tags": ["Animation", "React", "Library"],
+          "pricing": "free",
+          "rating": 5,
+          "featured": true,
+          "addedAt": "2024-01-01"
+        },
+        {
+          "id": "fe-003",
+          "name": "shadcn/ui",
+          "description": "Copy-paste React component library built on Radix UI + Tailwind.",
+          "url": "https://ui.shadcn.com",
+          "emoji": "🧩",
+          "category": "frontend-tools",
+          "tags": ["Components", "React", "Tailwind"],
+          "pricing": "free",
+          "rating": 5,
+          "featured": true,
+          "addedAt": "2024-01-01"
+        },
+        {
+          "id": "fe-004",
+          "name": "Lucide Icons",
+          "description": "Beautiful, consistent open-source icon library for React.",
+          "url": "https://lucide.dev",
+          "emoji": "✨",
+          "category": "frontend-tools",
+          "tags": ["Icons", "React", "SVG"],
+          "pricing": "free",
+          "rating": 5,
+          "featured": false,
+          "addedAt": "2024-01-01"
+        }
+      ]
+    },
+    {
+      "id": "backend-tools",
+      "label": "Backend Tools",
+      "icon": "Server",
+      "color": "#10B981",
+      "tools": [
+        {
+          "id": "be-001",
+          "name": "Postman",
+          "description": "API testing and documentation platform. Essential for backend development.",
+          "url": "https://postman.com",
+          "emoji": "📮",
+          "category": "backend-tools",
+          "tags": ["API", "Testing", "Documentation"],
+          "pricing": "freemium",
+          "rating": 5,
+          "featured": true,
+          "addedAt": "2024-01-01"
+        },
+        {
+          "id": "be-002",
+          "name": "Railway",
+          "description": "Deploy backends, databases, and cron jobs effortlessly. Free tier available.",
+          "url": "https://railway.app",
+          "emoji": "🚂",
+          "category": "backend-tools",
+          "tags": ["Deploy", "Hosting", "Database"],
+          "pricing": "freemium",
+          "rating": 5,
+          "featured": true,
+          "addedAt": "2024-01-01"
+        },
+        {
+          "id": "be-003",
+          "name": "Supabase",
+          "description": "Open-source Firebase alternative. PostgreSQL + Auth + Storage + Realtime.",
+          "url": "https://supabase.com",
+          "emoji": "⚡",
+          "category": "backend-tools",
+          "tags": ["Database", "Auth", "Realtime"],
+          "pricing": "freemium",
+          "rating": 5,
+          "featured": false,
+          "addedAt": "2024-01-01"
+        }
+      ]
+    },
+    {
+      "id": "data-science-tools",
+      "label": "Data Science",
+      "icon": "BarChart2",
+      "color": "#F59E0B",
+      "tools": [
+        {
+          "id": "ds-001",
+          "name": "Jupyter Notebook",
+          "description": "Interactive Python environment for data analysis and ML experimentation.",
+          "url": "https://jupyter.org",
+          "emoji": "📓",
+          "category": "data-science-tools",
+          "tags": ["Python", "ML", "Data Analysis"],
+          "pricing": "free",
+          "rating": 5,
+          "featured": true,
+          "addedAt": "2024-01-01"
+        },
+        {
+          "id": "ds-002",
+          "name": "Kaggle",
+          "description": "Data science competitions, free datasets, and GPU notebooks.",
+          "url": "https://kaggle.com",
+          "emoji": "🏆",
+          "category": "data-science-tools",
+          "tags": ["Competitions", "Datasets", "GPU"],
+          "pricing": "free",
+          "rating": 5,
+          "featured": true,
+          "addedAt": "2024-01-01"
+        },
+        {
+          "id": "ds-003",
+          "name": "Hugging Face",
+          "description": "The AI community hub. Pre-trained models, datasets, and Spaces.",
+          "url": "https://huggingface.co",
+          "emoji": "🤗",
+          "category": "data-science-tools",
+          "tags": ["ML Models", "NLP", "Transformers"],
+          "pricing": "freemium",
+          "rating": 5,
+          "featured": true,
+          "addedAt": "2024-01-01"
+        }
+      ]
+    },
+    {
+      "id": "devops-tools",
+      "label": "DevOps Tools",
+      "icon": "GitBranch",
+      "color": "#EF4444",
+      "tools": [
+        {
+          "id": "do-001",
+          "name": "GitHub Actions",
+          "description": "CI/CD automation built into GitHub. Free for public repos.",
+          "url": "https://github.com/features/actions",
+          "emoji": "⚙️",
+          "category": "devops-tools",
+          "tags": ["CI/CD", "Automation", "GitHub"],
+          "pricing": "freemium",
+          "rating": 5,
+          "featured": true,
+          "addedAt": "2024-01-01"
+        },
+        {
+          "id": "do-002",
+          "name": "Docker",
+          "description": "Containerize applications for consistent environments across dev and production.",
+          "url": "https://docker.com",
+          "emoji": "🐳",
+          "category": "devops-tools",
+          "tags": ["Containers", "DevOps", "Deployment"],
+          "pricing": "freemium",
+          "rating": 5,
+          "featured": true,
+          "addedAt": "2024-01-01"
+        }
+      ]
+    },
+    {
+      "id": "cloud-tools",
+      "label": "Cloud Tools",
+      "icon": "Cloud",
+      "color": "#3B82F6",
+      "tools": [
+        {
+          "id": "cl-001",
+          "name": "Vercel",
+          "description": "The best platform for deploying React/Next.js frontends. Free tier is generous.",
+          "url": "https://vercel.com",
+          "emoji": "▲",
+          "category": "cloud-tools",
+          "tags": ["Deploy", "Frontend", "CDN"],
+          "pricing": "freemium",
+          "rating": 5,
+          "featured": true,
+          "addedAt": "2024-01-01"
+        },
+        {
+          "id": "cl-002",
+          "name": "Cloudflare",
+          "description": "DNS, CDN, security, and serverless workers. The internet's backbone.",
+          "url": "https://cloudflare.com",
+          "emoji": "☁️",
+          "category": "cloud-tools",
+          "tags": ["CDN", "DNS", "Security"],
+          "pricing": "freemium",
+          "rating": 5,
+          "featured": true,
+          "addedAt": "2024-01-01"
+        },
+        {
+          "id": "cl-003",
+          "name": "AWS Free Tier",
+          "description": "Amazon Web Services — industry standard. 12 months free tier.",
+          "url": "https://aws.amazon.com/free",
+          "emoji": "🟠",
+          "category": "cloud-tools",
+          "tags": ["Cloud", "Hosting", "Services"],
+          "pricing": "freemium",
+          "rating": 4,
+          "featured": false,
+          "addedAt": "2024-01-01"
+        }
+      ]
+    }
+  ]
+}

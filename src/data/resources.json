@@ -1,0 +1,38 @@
+[
+  {
+    "id": "res-001",
+    "title": "React Hooks Cheatsheet",
+    "description": "Quick reference for all React hooks — useState, useEffect, useMemo, useCallback, useRef, and custom hooks.",
+    "type": "Cheatsheet",
+    "url": "/assets/downloads/resources/react-hooks-cheatsheet.pdf",
+    "isExternal": false,
+    "addedAt": "2024-01-15"
+  },
+  {
+    "id": "res-002",
+    "title": "Git Commands Reference",
+    "description": "Complete git command reference from init to advanced rebasing — the cheatsheet I wish I had when starting out.",
+    "type": "Cheatsheet",
+    "url": "/assets/downloads/resources/git-cheatsheet.pdf",
+    "isExternal": false,
+    "addedAt": "2024-02-01"
+  },
+  {
+    "id": "res-003",
+    "title": "Python for ML Starter Kit",
+    "description": "Jupyter notebook template with data loading, preprocessing, model training, and evaluation boilerplate.",
+    "type": "Template",
+    "url": "https://github.com/amanraj/python-ml-starter",
+    "isExternal": true,
+    "addedAt": "2024-02-15"
+  },
+  {
+    "id": "res-004",
+    "title": "MERN Stack Boilerplate",
+    "description": "Production-ready MERN stack starter with JWT auth, error handling, and folder structure best practices.",
+    "type": "Starter",
+    "url": "https://github.com/amanraj/mern-boilerplate",
+    "isExternal": true,
+    "addedAt": "2024-03-01"
+  }
+]

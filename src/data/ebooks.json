@@ -1,0 +1,71 @@
+[
+  {
+    "id": "ebook-001",
+    "slug": "python-ml-handbook",
+    "title": "The Python ML Handbook",
+    "subtitle": "From Zero to Production Machine Learning",
+    "coverImage": "/assets/images/ebooks/python-ml-handbook.jpg",
+    "downloadUrl": "/assets/downloads/ebooks/python-ml-handbook.pdf",
+    "previewUrl": "",
+    "pages": 120,
+    "category": "Machine Learning",
+    "tags": ["Python", "ML", "scikit-learn", "Pandas"],
+    "isFree": true,
+    "publishedAt": "2024-03-01",
+    "downloads": 1240,
+    "description": "A comprehensive guide covering Python for ML from data preprocessing to model deployment. Includes real-world projects and production best practices.",
+    "tableOfContents": [
+      "Python Refresher for ML",
+      "Data Preprocessing with Pandas",
+      "Supervised Learning Algorithms",
+      "Model Evaluation & Tuning",
+      "Deploying ML Models"
+    ]
+  },
+  {
+    "id": "ebook-002",
+    "slug": "mern-stack-complete-guide",
+    "title": "MERN Stack Complete Guide",
+    "subtitle": "Build Production-Ready Full-Stack Apps",
+    "coverImage": "/assets/images/ebooks/mern-guide.jpg",
+    "downloadUrl": "/assets/downloads/ebooks/mern-stack-guide.pdf",
+    "previewUrl": "",
+    "pages": 95,
+    "category": "Web Development",
+    "tags": ["MongoDB", "Express", "React", "Node.js"],
+    "isFree": true,
+    "publishedAt": "2024-01-15",
+    "downloads": 2100,
+    "description": "Step-by-step guide to building full-stack web applications with the MERN stack. Covers REST APIs, JWT auth, React hooks, and deployment.",
+    "tableOfContents": [
+      "MongoDB & Mongoose",
+      "Express.js REST APIs",
+      "React with Hooks",
+      "JWT Authentication",
+      "Deployment on Vercel & Railway"
+    ]
+  },
+  {
+    "id": "ebook-003",
+    "slug": "react-design-patterns",
+    "title": "React Design Patterns",
+    "subtitle": "Write Scalable and Maintainable React Code",
+    "coverImage": "/assets/images/ebooks/react-patterns.jpg",
+    "downloadUrl": "/assets/downloads/ebooks/react-patterns.pdf",
+    "previewUrl": "",
+    "pages": 75,
+    "category": "Frontend",
+    "tags": ["React", "JavaScript", "Patterns", "Architecture"],
+    "isFree": true,
+    "publishedAt": "2023-11-01",
+    "downloads": 870,
+    "description": "Advanced React patterns including compound components, render props, custom hooks, context optimization, and state management strategies.",
+    "tableOfContents": [
+      "Custom Hooks Patterns",
+      "Compound Components",
+      "Context with Reducers",
+      "Performance Patterns",
+      "Testing Strategies"
+    ]
+  }
+]

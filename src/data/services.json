@@ -1,0 +1,53 @@
+[
+  {
+    "id": "svc-001",
+    "slug": "full-stack-development",
+    "title": "Full-Stack Web Development",
+    "icon": "💻",
+    "description": "End-to-end MERN stack web applications — from database architecture to pixel-perfect frontends.",
+    "features": [
+      "React + TailwindCSS frontends",
+      "Node.js + Express REST APIs",
+      "MongoDB / PostgreSQL databases",
+      "JWT authentication & authorization",
+      "Deployment on Vercel / Railway",
+      "Performance optimization"
+    ],
+    "cta": "Hire Me",
+    "ctaLink": "/contact?service=full-stack"
+  },
+  {
+    "id": "svc-002",
+    "slug": "ai-ml-development",
+    "title": "AI/ML Engineering",
+    "icon": "🤖",
+    "description": "Custom machine learning models and AI-powered product features — from prototype to production.",
+    "features": [
+      "Custom ML model development",
+      "NLP & text processing pipelines",
+      "Computer vision solutions",
+      "ML API development (FastAPI)",
+      "Model training & fine-tuning",
+      "AI feature integration into web apps"
+    ],
+    "cta": "Get a Quote",
+    "ctaLink": "/contact?service=ai-ml"
+  },
+  {
+    "id": "svc-003",
+    "slug": "technical-training",
+    "title": "Technical Training",
+    "icon": "🎓",
+    "description": "Personalized 1:1 or group training sessions on web development, Python, ML, and AI for beginners to advanced learners.",
+    "features": [
+      "1:1 mentorship sessions",
+      "Custom learning curriculum",
+      "Project-based learning",
+      "Web Dev / Python / ML topics",
+      "Code reviews & feedback",
+      "Interview preparation"
+    ],
+    "cta": "Book a Session",
+    "ctaLink": "/contact?service=training"
+  }
+]
