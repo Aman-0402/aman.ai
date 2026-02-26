@@ -3,23 +3,20 @@ name: Deploy to GitHub Pages
 # ─── Triggers ─────────────────────────────────────────────────────────────────
 on:
   push:
-    branches: [main]       # Auto-deploy on every push to main
-  workflow_dispatch:       # Allow manual trigger from GitHub Actions UI
+    branches: [main]
+  workflow_dispatch:          # Allow manual trigger from Actions UI
 
 # ─── Permissions ──────────────────────────────────────────────────────────────
-# Minimum required permissions for GitHub Pages deployment via OIDC.
-# contents:read  — checkout the repo
-# pages:write    — write to the gh-pages deployment
-# id-token:write — generate OIDC token for trusted deployment (no PAT needed)
+# These three are the minimum required for GitHub Pages OIDC deployment.
+# Do NOT add extra permissions — principle of least privilege.
 permissions:
-  contents: read
-  pages: write
-  id-token: write
+  contents: read              # Checkout the repo
+  pages: write                # Write to GitHub Pages deployment
+  id-token: write             # Generate OIDC token (no PAT or secret needed)
 
 # ─── Concurrency ──────────────────────────────────────────────────────────────
-# Only one deployment runs at a time.
-# cancel-in-progress: false ensures a running deploy finishes before the next
-# one starts — avoids serving a half-deployed site.
+# Only one deployment at a time. cancel-in-progress: false means the current
+# deploy FINISHES before the next one starts — prevents half-deployed states.
 concurrency:
   group: pages
   cancel-in-progress: false
@@ -27,61 +24,76 @@ concurrency:
 # ─── Jobs ─────────────────────────────────────────────────────────────────────
 jobs:
 
-  # ── Job 1: Build ─────────────────────────────────────────────────────────────
-  # Runs on every push. Produces the dist/ artifact.
-  # Separated from deploy so a failed build never triggers a partial deploy.
+  # ────────────────────────────────────────────────────────────────────────────
+  # JOB 1 — BUILD
+  # Compiles the React app and produces a deployable dist/ artifact.
+  # Separated from deploy so a failed build never touches the live site.
+  # ────────────────────────────────────────────────────────────────────────────
   build:
     name: Build
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout repository
+      - name: Checkout
         uses: actions/checkout@v4
-        with:
-          fetch-depth: 0    # Full history for accurate last-modified dates
 
       - name: Setup Node.js 20
         uses: actions/setup-node@v4
         with:
           node-version: '20'
-          cache: 'npm'      # Cache node_modules between runs
+          cache: npm
 
       - name: Install dependencies
-        run: npm ci          # Strict clean install — never uses cached node_modules
+        run: npm ci
 
-      # IMPORTANT: configure-pages runs BEFORE the build.
-      # It outputs base_path ('/' with custom domain, '/aman.ai/' without).
-      # This value is passed into Vite via VITE_BASE_PATH so all asset paths
-      # and the router basename are set correctly at build time.
+      # ── MUST run before the build ──────────────────────────────────────────
+      # configure-pages reads repo settings and outputs:
+      #   base_path = '/'          when a verified custom domain is active
+      #   base_path = '/aman.ai/'  when using the default subdomain
+      #
+      # PREREQUISITE: GitHub Pages source must be set to "GitHub Actions"
+      # in repo Settings → Pages → Source. If it isn't, this step will fail
+      # with "Error: Get Pages site failed". Fix: enable Pages in settings first.
       - name: Configure GitHub Pages
         id: pages
         uses: actions/configure-pages@v4
 
+      # ── Inject base path at build time ────────────────────────────────────
+      # Vite reads VITE_BASE_PATH in vite.config.js:
+      #   base: process.env.VITE_BASE_PATH || '/'
+      #
+      # This sets the base URL for ALL asset references in the built HTML:
+      #   With custom domain:  src="/assets/vendor.js"
+      #   On subdomain:        src="/aman.ai/assets/vendor.js"
+      #
+      # Without this env var the assets load from the wrong path → white screen.
       - name: Build production bundle
         run: npm run build
         env:
-          # Inject the correct base path determined by configure-pages above.
-          # Vite reads this in vite.config.js: base: process.env.VITE_BASE_PATH || '/'
           VITE_BASE_PATH: ${{ steps.pages.outputs.base_path }}
 
-      # Upload dist/ as a GitHub Pages artifact — passed to the deploy job.
-      # Retention: 1 day (default). Artifacts are auto-cleaned up.
+      # Upload dist/ directory as a Pages artifact (not a regular Actions artifact).
+      # This is what deploy-pages will serve — not a gh-pages branch.
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
         with:
           path: dist
 
-  # ── Job 2: Deploy ─────────────────────────────────────────────────────────────
-  # Only runs after the build job succeeds.
-  # Uses the GitHub Pages deployment API — no branch switching, no git push.
+  # ────────────────────────────────────────────────────────────────────────────
+  # JOB 2 — DEPLOY
+  # Pushes the artifact to GitHub Pages via the deployment API.
+  # Only runs after build succeeds (needs: build).
+  # ────────────────────────────────────────────────────────────────────────────
   deploy:
     name: Deploy
-    needs: build             # Must wait for build to finish
+    needs: build
     runs-on: ubuntu-latest
 
+    # This creates the "github-pages" environment visible in the repo UI.
+    # The live URL appears in the PR/commit status and the Deployments tab.
     environment:
       name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}   # Shown in GitHub UI
+      url: ${{ steps.deployment.outputs.page_url }}
 
     steps:
       - name: Deploy to GitHub Pages
