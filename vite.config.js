@@ -6,9 +6,13 @@ import path from 'path'
 export default defineConfig({
   plugins: [react()],
 
-  // Set base to '/' for custom domain (amanraj.dev)
-  // Set base to '/repo-name/' if using github.io subdomain without custom domain
-  base: '/',
+  // Base path strategy:
+  //   - In GitHub Actions, VITE_BASE_PATH is injected by actions/configure-pages.
+  //     It outputs '/' when a custom domain is configured, or '/aman.ai/' when
+  //     using the default aman-0402.github.io/aman.ai/ subdomain.
+  //   - Locally (npm run dev), it falls back to '/' — no configuration needed.
+  //   This single line handles ALL deployment scenarios automatically.
+  base: process.env.VITE_BASE_PATH || '/',
 
   resolve: {
     alias: {

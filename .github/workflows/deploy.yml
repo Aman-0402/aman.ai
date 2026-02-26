@@ -1,53 +1,89 @@
 name: Deploy to GitHub Pages
 
+# ─── Triggers ─────────────────────────────────────────────────────────────────
 on:
   push:
-    branches: [main]
-  workflow_dispatch:
+    branches: [main]       # Auto-deploy on every push to main
+  workflow_dispatch:       # Allow manual trigger from GitHub Actions UI
 
-# Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
+# ─── Permissions ──────────────────────────────────────────────────────────────
+# Minimum required permissions for GitHub Pages deployment via OIDC.
+# contents:read  — checkout the repo
+# pages:write    — write to the gh-pages deployment
+# id-token:write — generate OIDC token for trusted deployment (no PAT needed)
 permissions:
   contents: read
   pages: write
   id-token: write
 
-# Allow only one concurrent deployment
+# ─── Concurrency ──────────────────────────────────────────────────────────────
+# Only one deployment runs at a time.
+# cancel-in-progress: false ensures a running deploy finishes before the next
+# one starts — avoids serving a half-deployed site.
 concurrency:
-  group: 'pages'
-  cancel-in-progress: true
+  group: pages
+  cancel-in-progress: false
 
+# ─── Jobs ─────────────────────────────────────────────────────────────────────
 jobs:
-  build-and-deploy:
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
 
+  # ── Job 1: Build ─────────────────────────────────────────────────────────────
+  # Runs on every push. Produces the dist/ artifact.
+  # Separated from deploy so a failed build never triggers a partial deploy.
+  build:
+    name: Build
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout
+      - name: Checkout repository
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0    # Full history for accurate last-modified dates
 
-      - name: Setup Node.js
+      - name: Setup Node.js 20
         uses: actions/setup-node@v4
         with:
           node-version: '20'
-          cache: 'npm'
+          cache: 'npm'      # Cache node_modules between runs
 
       - name: Install dependencies
-        run: npm ci
+        run: npm ci          # Strict clean install — never uses cached node_modules
 
-      - name: Build
-        run: npm run build
-
-      - name: Setup Pages
+      # IMPORTANT: configure-pages runs BEFORE the build.
+      # It outputs base_path ('/' with custom domain, '/aman.ai/' without).
+      # This value is passed into Vite via VITE_BASE_PATH so all asset paths
+      # and the router basename are set correctly at build time.
+      - name: Configure GitHub Pages
+        id: pages
         uses: actions/configure-pages@v4
 
-      - name: Upload artifact
+      - name: Build production bundle
+        run: npm run build
+        env:
+          # Inject the correct base path determined by configure-pages above.
+          # Vite reads this in vite.config.js: base: process.env.VITE_BASE_PATH || '/'
+          VITE_BASE_PATH: ${{ steps.pages.outputs.base_path }}
+
+      # Upload dist/ as a GitHub Pages artifact — passed to the deploy job.
+      # Retention: 1 day (default). Artifacts are auto-cleaned up.
+      - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: './dist'
+          path: dist
 
+  # ── Job 2: Deploy ─────────────────────────────────────────────────────────────
+  # Only runs after the build job succeeds.
+  # Uses the GitHub Pages deployment API — no branch switching, no git push.
+  deploy:
+    name: Deploy
+    needs: build             # Must wait for build to finish
+    runs-on: ubuntu-latest
+
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}   # Shown in GitHub UI
+
+    steps:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
