@@ -84,27 +84,30 @@
     </script>
 
     <!--
-      SPA Routing Fix for GitHub Pages.
-      Step 2 of 2: Decode the redirect injected by 404.html back into a real URL
-      and push it into browser history BEFORE React Router initialises.
-      Without this, refreshing /projects would render the app at /?/projects
-      instead of /projects, breaking all deep links and shared URLs.
-
+      SPA Routing Fix for GitHub Pages — Step 2 of 2 (the decoder).
       Pairs with: public/404.html (the encoder)
-      Source: https://github.com/rafgraph/spa-github-pages
+
+      Reads the encoded path from the query string (written by 404.html),
+      reconstructs the real URL, and pushes it to browser history BEFORE
+      React Router initialises — so the router sees the correct path.
+
+      Example (subdomain):  /aman.ai/?/projects  →  /aman.ai/projects
+      Example (custom domain): /?/projects       →  /projects
     -->
     <script>
       ;(function (l) {
+        // The encoder writes '?/path' into the query string.
+        // Check that the query starts with '/' to distinguish from real query params.
         if (l.search[1] === '/') {
           var decoded = l.search
-            .slice(1)
-            .split('&')
-            .map(function (s) { return s.replace(/~and~/g, '&') })
-            .join('?')
+            .slice(1)                                    // strip leading '?'
+            .split('&')                                  // separate path from any real params
+            .map(function (s) { return s.replace(/~and~/g, '&') })  // restore encoded &
+            .join('?')                                   // first segment is path, rest are params
           window.history.replaceState(
             null,
             null,
-            l.pathname.slice(0, -1) + decoded + l.hash
+            l.pathname.slice(0, -1) + decoded + l.hash  // rebuild full URL
           )
         }
       })(window.location)
