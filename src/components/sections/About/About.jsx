@@ -16,7 +16,7 @@ import techStackData from '@data/techstack.json'
 // ─── Constants ────────────────────────────────────────────────────────────────
 
 // BASE_URL = '/' in dev, '/aman.ai/' on GitHub Pages — must prefix all public assets
-const PROFILE_IMAGE = `${import.meta.env.BASE_URL}assets/images/Avatar%20Hero.png`
+const PROFILE_IMAGE = `${import.meta.env.BASE_URL}assets/images/AvatarHero.png`
 
 const STATS = [
   { icon: Calendar,   value: '5+',    label: 'Years Experience'  },
