@@ -12,11 +12,13 @@ import { viewport } from '@animations/transitions'
 import skillsData from '@data/skills.json'
 import timelineData from '@data/timeline.json'
 import techStackData from '@data/techstack.json'
+import profileImage from '@/assets/images/AvatarHero.png'
 
 // ─── Constants ────────────────────────────────────────────────────────────────
 
 // BASE_URL = '/' in dev, '/aman.ai/' on GitHub Pages — must prefix all public assets
-const PROFILE_IMAGE = `${import.meta.env.BASE_URL}assets/images/AvatarHero.png`
+const PROFILE_IMAGE = profileImage
+
 
 const STATS = [
   { icon: Calendar,   value: '5+',    label: 'Years Experience'  },
