@@ -1,4 +1,5 @@
 import PageLayout from '@components/layout/PageLayout'
+import About from '@components/sections/About/About'
 
 export default function AboutPage() {
   return (
@@ -7,9 +8,7 @@ export default function AboutPage() {
       description="Learn about Aman Raj — Full-Stack MERN Developer, AI/ML Engineer, Python Expert, and Technical Trainer with 5+ years of experience building intelligent web products."
       path="/about"
     >
-      <section className="section-container section-padding">
-        <p className="text-text-secondary">About section — coming soon.</p>
-      </section>
+      <About />
     </PageLayout>
   )
 }

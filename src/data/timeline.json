@@ -1,0 +1,58 @@
+[
+  {
+    "id": 1,
+    "year": "2019",
+    "title": "Started the Developer Journey",
+    "type": "education",
+    "description": "Began learning web development with HTML, CSS, and JavaScript. Fell in love with programming and decided to pursue it seriously, spending hours building small projects every day.",
+    "tags": ["HTML", "CSS", "JavaScript", "Self-Taught"]
+  },
+  {
+    "id": 2,
+    "year": "2020",
+    "title": "First Freelance Project & MERN Stack",
+    "type": "work",
+    "description": "Landed my first freelance client and shipped a business website. Discovered the MERN stack and went all-in on React + Node.js, building multiple full-stack applications.",
+    "tags": ["React", "Node.js", "MongoDB", "Freelance"]
+  },
+  {
+    "id": 3,
+    "year": "2021",
+    "title": "Deep Dive into Python & Machine Learning",
+    "type": "milestone",
+    "description": "Expanded into the Python ecosystem — data science, scikit-learn, and statistical modelling. Built my first end-to-end ML pipelines and started combining web and AI in projects.",
+    "tags": ["Python", "scikit-learn", "Pandas", "Data Science"]
+  },
+  {
+    "id": 4,
+    "year": "2022",
+    "title": "Started Teaching & Content Creation",
+    "type": "milestone",
+    "description": "Launched the Think_Like_Me YouTube channel and began training 50+ developers. Discovered that teaching is the fastest way to deepen your own expertise.",
+    "tags": ["YouTube", "Teaching", "50+ Students", "Mentorship"]
+  },
+  {
+    "id": 5,
+    "year": "2023",
+    "title": "AI-Powered Products & Technical eBooks",
+    "type": "work",
+    "description": "Built production AI applications integrating LLMs, RAG pipelines, and ML models via FastAPI. Published technical eBooks to share knowledge with the wider developer community.",
+    "tags": ["LangChain", "FastAPI", "LLMs", "eBooks"]
+  },
+  {
+    "id": 6,
+    "year": "2024",
+    "title": "200+ Students & AI/ML Consulting",
+    "type": "milestone",
+    "description": "Crossed the 200+ students trained milestone. Expanded into corporate training workshops and started AI/ML consulting for startups looking to integrate intelligent features.",
+    "tags": ["200+ Students", "Consulting", "Workshops", "AI Engineering"]
+  },
+  {
+    "id": 7,
+    "year": "2025",
+    "title": "Launched aman.ai — Personal Brand Platform",
+    "type": "launch",
+    "description": "Built and launched aman.ai — a unified personal brand platform combining projects, services, technical blog, eBooks, and the AI/ML Knowledge Hub.",
+    "tags": ["React", "Vite", "TailwindCSS", "Personal Brand"]
+  }
+]

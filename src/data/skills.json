@@ -1,0 +1,54 @@
+[
+  {
+    "category": "Frontend Development",
+    "icon": "Layout",
+    "color": "#6366F1",
+    "skills": [
+      { "name": "React.js",           "level": 95 },
+      { "name": "JavaScript / ES6+",  "level": 92 },
+      { "name": "TypeScript",         "level": 75 },
+      { "name": "TailwindCSS",        "level": 95 },
+      { "name": "Next.js",            "level": 78 },
+      { "name": "Framer Motion",      "level": 85 }
+    ]
+  },
+  {
+    "category": "Backend & APIs",
+    "icon": "Server",
+    "color": "#22D3EE",
+    "skills": [
+      { "name": "Python",             "level": 92 },
+      { "name": "Node.js",            "level": 88 },
+      { "name": "Express.js",         "level": 88 },
+      { "name": "FastAPI",            "level": 80 },
+      { "name": "REST API Design",    "level": 90 },
+      { "name": "MongoDB",            "level": 90 }
+    ]
+  },
+  {
+    "category": "AI & Machine Learning",
+    "icon": "Brain",
+    "color": "#F59E0B",
+    "skills": [
+      { "name": "scikit-learn",       "level": 85 },
+      { "name": "Pandas & NumPy",     "level": 90 },
+      { "name": "XGBoost",            "level": 80 },
+      { "name": "TensorFlow / Keras", "level": 72 },
+      { "name": "LangChain / RAG",    "level": 70 },
+      { "name": "Data Visualisation", "level": 82 }
+    ]
+  },
+  {
+    "category": "DevOps & Tooling",
+    "icon": "GitBranch",
+    "color": "#10B981",
+    "skills": [
+      { "name": "Git & GitHub",       "level": 95 },
+      { "name": "GitHub Actions",     "level": 82 },
+      { "name": "Docker",             "level": 70 },
+      { "name": "PostgreSQL",         "level": 72 },
+      { "name": "Figma",              "level": 75 },
+      { "name": "Linux / Bash",       "level": 78 }
+    ]
+  }
+]
