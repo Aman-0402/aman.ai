@@ -142,7 +142,7 @@ export default function Footer() {
 
           <div className="flex items-center gap-4">
             <a
-              href="/assets/downloads/resume.pdf"
+              href={`${import.meta.env.BASE_URL}assets/downloads/resume.pdf`}
               download
               className="text-xs text-text-muted hover:text-brand-primary transition-colors"
             >

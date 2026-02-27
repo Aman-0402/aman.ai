@@ -89,7 +89,7 @@ export default function MobileMenu({ links, onClose, isDark, onToggleTheme }) {
           {/* CTA buttons */}
           <motion.div variants={mobileMenuItem} className="space-y-3">
             <a
-              href="/assets/downloads/resume.pdf"
+              href={`${import.meta.env.BASE_URL}assets/downloads/resume.pdf`}
               download="Aman_Raj_Resume.pdf"
               className="flex w-full items-center justify-center gap-2 rounded-xl bg-brand-primary px-4 py-3 text-sm font-medium text-white shadow-glow-primary transition-all hover:bg-brand-dark"
             >

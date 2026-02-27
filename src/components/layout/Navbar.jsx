@@ -145,7 +145,7 @@ export default function Navbar() {
 
             {/* Resume CTA */}
             <motion.a
-              href="/assets/downloads/resume.pdf"
+              href={`${import.meta.env.BASE_URL}assets/downloads/resume.pdf`}
               download="Aman_Raj_Resume.pdf"
               whileHover={{ y: -1 }}
               whileTap={{ scale: 0.96 }}

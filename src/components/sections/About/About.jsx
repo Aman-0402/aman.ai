@@ -15,7 +15,8 @@ import techStackData from '@data/techstack.json'
 
 // ─── Constants ────────────────────────────────────────────────────────────────
 
-const PROFILE_IMAGE = '/assets/images/Avatar%20Hero.png'
+// BASE_URL = '/' in dev, '/aman.ai/' on GitHub Pages — must prefix all public assets
+const PROFILE_IMAGE = `${import.meta.env.BASE_URL}assets/images/Avatar%20Hero.png`
 
 const STATS = [
   { icon: Calendar,   value: '5+',    label: 'Years Experience'  },
@@ -463,7 +464,7 @@ export default function About() {
             {/* CTAs */}
             <motion.div variants={fadeUp} className="flex flex-wrap gap-3 pt-2">
               <a
-                href="/assets/downloads/resume.pdf"
+                href={`${import.meta.env.BASE_URL}assets/downloads/resume.pdf`}
                 download
                 className="inline-flex items-center gap-2 rounded-xl bg-brand-primary px-5 py-2.5 text-sm font-medium text-white hover:bg-brand-primary/90 transition-colors shadow-glow-primary"
               >
