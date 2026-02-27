@@ -9,10 +9,10 @@ import {
 } from '@animations/variants'
 
 const SOCIAL_LINKS = [
-  { icon: Github,   href: 'https://github.com/amanraj',       label: 'GitHub' },
-  { icon: Linkedin, href: 'https://linkedin.com/in/amanraj',  label: 'LinkedIn' },
-  { icon: Twitter,  href: 'https://twitter.com/amanraj',      label: 'Twitter' },
-  { icon: Mail,     href: 'mailto:hello@amanraj.dev',         label: 'Email' },
+  { icon: Github,   href: 'https://github.com/Aman-0402',                    label: 'GitHub' },
+  { icon: Linkedin, href: 'https://www.linkedin.com/in/aman-raj-081905211/', label: 'LinkedIn' },
+  { icon: Twitter,  href: 'https://x.com/Code_Like_Aman',                   label: 'Twitter/X' },
+  { icon: Mail,     href: 'mailto:think.like.ai.aman@gmail.com',             label: 'Email' },
 ]
 
 export default function MobileMenu({ links, onClose, isDark, onToggleTheme }) {

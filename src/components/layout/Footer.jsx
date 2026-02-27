@@ -18,19 +18,19 @@ const FOOTER_LINKS = {
     { label: 'Resources',     href: '/resources' },
   ],
   Connect: [
-    { label: 'GitHub',    href: 'https://github.com/amanraj',      external: true },
-    { label: 'LinkedIn',  href: 'https://linkedin.com/in/amanraj', external: true },
-    { label: 'Twitter/X', href: 'https://twitter.com/amanraj',     external: true },
-    { label: 'Email',     href: 'mailto:hello@amanraj.dev',        external: false },
+    { label: 'GitHub',    href: 'https://github.com/Aman-0402',                        external: true },
+    { label: 'LinkedIn',  href: 'https://www.linkedin.com/in/aman-raj-081905211/',     external: true },
+    { label: 'Twitter/X', href: 'https://x.com/Code_Like_Aman',                       external: true },
+    { label: 'Email',     href: 'mailto:think.like.ai.aman@gmail.com',                external: false },
   ],
 }
 
 const SOCIALS = [
-  { Icon: Github,   href: 'https://github.com/amanraj',       label: 'GitHub' },
-  { Icon: Linkedin, href: 'https://linkedin.com/in/amanraj',  label: 'LinkedIn' },
-  { Icon: Twitter,  href: 'https://twitter.com/amanraj',      label: 'Twitter' },
-  { Icon: Youtube,  href: 'https://youtube.com/@amanraj',     label: 'YouTube' },
-  { Icon: Mail,     href: 'mailto:hello@amanraj.dev',         label: 'Email' },
+  { Icon: Github,   href: 'https://github.com/Aman-0402',                      label: 'GitHub' },
+  { Icon: Linkedin, href: 'https://www.linkedin.com/in/aman-raj-081905211/',   label: 'LinkedIn' },
+  { Icon: Twitter,  href: 'https://x.com/Code_Like_Aman',                     label: 'Twitter/X' },
+  { Icon: Youtube,  href: 'https://www.youtube.com/@Think_Like_Me',            label: 'YouTube' },
+  { Icon: Mail,     href: 'mailto:think.like.ai.aman@gmail.com',               label: 'Email' },
 ]
 
 export default function Footer() {

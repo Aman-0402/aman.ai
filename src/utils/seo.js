@@ -2,7 +2,7 @@
 // Usage: const meta = generateMeta({ title, description, path, image })
 
 const SITE_NAME  = 'Aman Raj'
-const SITE_URL   = 'https://amanraj.dev'
+const SITE_URL   = 'https://aman-0402.github.io/aman.ai'   // Update to amanraj.dev when custom domain is live
 const SITE_IMAGE = '/assets/og/og-default.jpg'
 const SITE_DESC  = 'Full-Stack MERN Developer, AI/ML Engineer, Python Expert & Technical Trainer.'
 

@@ -12,8 +12,8 @@
     "featured": true,
     "status": "live",
     "links": {
-      "demo": "https://demo.amanraj.dev/ai-resume",
-      "github": "https://github.com/amanraj/ai-resume-builder",
+      "demo": "",
+      "github": "https://github.com/Aman-0402/ai-resume-builder",
       "caseStudy": ""
     },
     "year": 2024,
@@ -34,7 +34,7 @@
     "status": "live",
     "links": {
       "demo": "",
-      "github": "https://github.com/amanraj/ml-price-predictor",
+      "github": "https://github.com/Aman-0402/ml-price-predictor",
       "caseStudy": ""
     },
     "year": 2024,
@@ -54,8 +54,8 @@
     "featured": false,
     "status": "live",
     "links": {
-      "demo": "https://devboard.amanraj.dev",
-      "github": "https://github.com/amanraj/devboard",
+      "demo": "",
+      "github": "https://github.com/Aman-0402/devboard",
       "caseStudy": ""
     },
     "year": 2023,

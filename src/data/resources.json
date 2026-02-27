@@ -22,7 +22,7 @@
     "title": "Python for ML Starter Kit",
     "description": "Jupyter notebook template with data loading, preprocessing, model training, and evaluation boilerplate.",
     "type": "Template",
-    "url": "https://github.com/amanraj/python-ml-starter",
+    "url": "https://github.com/Aman-0402/python-ml-starter",
     "isExternal": true,
     "addedAt": "2024-02-15"
   },
@@ -31,7 +31,7 @@
     "title": "MERN Stack Boilerplate",
     "description": "Production-ready MERN stack starter with JWT auth, error handling, and folder structure best practices.",
     "type": "Starter",
-    "url": "https://github.com/amanraj/mern-boilerplate",
+    "url": "https://github.com/Aman-0402/mern-boilerplate",
     "isExternal": true,
     "addedAt": "2024-03-01"
   }

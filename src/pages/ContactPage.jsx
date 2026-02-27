@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { motion } from 'framer-motion'
-import { Mail, Github, Linkedin, Twitter, Send, MapPin, Clock } from 'lucide-react'
+import { Mail, Github, Linkedin, Twitter, Phone, Send, MapPin, Clock } from 'lucide-react'
 import PageLayout from '@components/layout/PageLayout'
 import { fadeUp, staggerContainer } from '@animations/variants'
 import { viewport } from '@animations/transitions'
@@ -9,26 +9,32 @@ const CONTACT_METHODS = [
   {
     icon: Mail,
     label: 'Email',
-    value: 'hello@amanraj.dev',
-    href: 'mailto:hello@amanraj.dev',
+    value: 'think.like.ai.aman@gmail.com',
+    href: 'mailto:think.like.ai.aman@gmail.com',
+  },
+  {
+    icon: Phone,
+    label: 'Phone / WhatsApp',
+    value: '+91 98521 04967',
+    href: 'tel:+919852104967',
   },
   {
     icon: Github,
     label: 'GitHub',
-    value: 'github.com/amanraj',
-    href: 'https://github.com/amanraj',
+    value: 'github.com/Aman-0402',
+    href: 'https://github.com/Aman-0402',
   },
   {
     icon: Linkedin,
     label: 'LinkedIn',
-    value: 'linkedin.com/in/amanraj',
-    href: 'https://linkedin.com/in/amanraj',
+    value: 'linkedin.com/in/aman-raj-081905211',
+    href: 'https://www.linkedin.com/in/aman-raj-081905211/',
   },
   {
     icon: Twitter,
-    label: 'Twitter',
-    value: '@amanraj',
-    href: 'https://twitter.com/amanraj',
+    label: 'Twitter / X',
+    value: '@Code_Like_Aman',
+    href: 'https://x.com/Code_Like_Aman',
   },
 ]
 
@@ -251,6 +257,12 @@ export default function ContactPage() {
               </div>
               <div className="flex items-center gap-2 text-xs text-text-muted mt-1">
                 <Clock size={12} /> Responds within 24 hours
+              </div>
+              <div className="flex items-center gap-2 text-xs text-text-muted mt-1">
+                <Phone size={12} />
+                <a href="tel:+919852104967" className="hover:text-brand-primary transition-colors">
+                  +91 98521 04967
+                </a>
               </div>
             </motion.div>
           </motion.div>
