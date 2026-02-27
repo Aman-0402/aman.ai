@@ -24,7 +24,7 @@ const STATS = [
   { icon: Layers,     value: '40+',   label: 'Technologies'      },
 ]
 
-const TABS = ['Skills', 'Journey', 'What I Do']
+const TABS = ['Skills', 'Tech Stack', 'Journey', 'What I Do']
 
 const WHAT_I_DO = [
   {
@@ -278,6 +278,54 @@ function WhatIDoTab() {
   )
 }
 
+function TechStackTab() {
+  return (
+    <motion.div
+      key="techstack"
+      variants={tabContent}
+      initial="hidden"
+      animate="visible"
+      exit="exit"
+      className="space-y-8"
+    >
+      {techStackData.map((group) => (
+        <motion.div
+          key={group.category}
+          variants={fadeUp}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+        >
+          <p className="mb-3 text-xs font-semibold uppercase tracking-widest text-text-muted">
+            {group.category}
+          </p>
+          <div className="flex flex-wrap gap-2.5">
+            {group.techs.map((tech) => (
+              <div
+                key={tech.name}
+                className="flex items-center gap-2.5 rounded-xl border border-bg-border bg-bg-elevated px-3.5 py-2.5 transition-all duration-200 hover:border-brand-primary/40 hover:bg-brand-primary/5 group"
+              >
+                <img
+                  src={tech.icon}
+                  alt={tech.name}
+                  width={22}
+                  height={22}
+                  className={`h-[22px] w-[22px] object-contain flex-shrink-0 ${tech.invert ? 'dark:invert' : ''}`}
+                  loading="lazy"
+                  onError={(e) => { e.target.style.display = 'none' }}
+                />
+                <span className="text-sm text-text-secondary group-hover:text-text-primary transition-colors">
+                  {tech.name}
+                </span>
+              </div>
+            ))}
+          </div>
+        </motion.div>
+      ))}
+    </motion.div>
+  )
+}
+
 // ─── Main Component ───────────────────────────────────────────────────────────
 
 export default function About() {
@@ -434,64 +482,6 @@ export default function About() {
         </div>
       </div>
 
-      {/* ── Tech Stack Grid ───────────────────────────────────────────────────── */}
-      <div className="border-t border-bg-border bg-bg-surface">
-        <div className="section-container py-16">
-          <motion.div
-            variants={fadeUp}
-            initial="hidden"
-            whileInView="visible"
-            viewport={viewport}
-            className="mb-10 text-center"
-          >
-            <span className="tag mb-3 inline-block">My Tech Stack</span>
-            <h2 className="font-display text-2xl font-bold text-text-primary">
-              Technologies I Work With
-            </h2>
-            <p className="mt-2 text-sm text-text-secondary">
-              40+ tools and technologies across the full stack
-            </p>
-          </motion.div>
-
-          <div className="space-y-10">
-            {techStackData.map((group) => (
-              <motion.div
-                key={group.category}
-                variants={fadeUp}
-                initial="hidden"
-                whileInView="visible"
-                viewport={viewport}
-              >
-                <p className="mb-4 text-xs font-semibold uppercase tracking-widest text-text-muted">
-                  {group.category}
-                </p>
-                <div className="flex flex-wrap gap-3">
-                  {group.techs.map((tech) => (
-                    <div
-                      key={tech.name}
-                      className="flex items-center gap-2.5 rounded-xl border border-bg-border bg-bg-elevated px-3.5 py-2.5 transition-all duration-200 hover:border-brand-primary/40 hover:bg-brand-primary/5 group"
-                    >
-                      <img
-                        src={tech.icon}
-                        alt={tech.name}
-                        width={22}
-                        height={22}
-                        className={`h-[22px] w-[22px] object-contain flex-shrink-0 ${tech.invert ? 'dark:invert' : ''}`}
-                        loading="lazy"
-                        onError={(e) => { e.target.style.display = 'none' }}
-                      />
-                      <span className="text-sm text-text-secondary group-hover:text-text-primary transition-colors">
-                        {tech.name}
-                      </span>
-                    </div>
-                  ))}
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </div>
-
       {/* ── Tabs Section ──────────────────────────────────────────────────────── */}
       <div className="border-t border-bg-border bg-bg-surface">
         <div className="section-container py-16">
@@ -521,9 +511,10 @@ export default function About() {
 
           {/* Tab content */}
           <AnimatePresence mode="wait">
-            {activeTab === 'Skills'    && <SkillsTab />}
-            {activeTab === 'Journey'   && <JourneyTab />}
-            {activeTab === 'What I Do' && <WhatIDoTab />}
+            {activeTab === 'Skills'      && <SkillsTab />}
+            {activeTab === 'Tech Stack'  && <TechStackTab />}
+            {activeTab === 'Journey'     && <JourneyTab />}
+            {activeTab === 'What I Do'   && <WhatIDoTab />}
           </AnimatePresence>
         </div>
       </div>
