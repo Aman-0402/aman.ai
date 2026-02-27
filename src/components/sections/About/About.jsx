@@ -14,7 +14,7 @@ import timelineData from '@data/timeline.json'
 
 // ─── Constants ────────────────────────────────────────────────────────────────
 
-const PROFILE_IMAGE = '/assets/images/avatar.png'
+const PROFILE_IMAGE = '/assets/images/Avatar%20Hero.png'
 
 const STATS = [
   { icon: Calendar,   value: '5+',   label: 'Years Experience' },
