@@ -23,7 +23,7 @@
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://amanraj.dev/" />
+    <meta property="og:url" content="https://aman-0402.github.io/aman.ai/" />
     <meta property="og:title" content="Aman Raj — Web Developer & AI/ML Expert" />
     <meta
       property="og:description"
@@ -35,16 +35,17 @@
 
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:url" content="https://amanraj.dev/" />
+    <meta name="twitter:url" content="https://aman-0402.github.io/aman.ai/" />
     <meta name="twitter:title" content="Aman Raj — Web Developer & AI/ML Expert" />
     <meta
       name="twitter:description"
       content="Full-Stack MERN Developer, AI/ML Engineer, Python Expert & Technical Trainer."
     />
     <meta name="twitter:image" content="/assets/og/og-default.jpg" />
+    <meta name="twitter:creator" content="@Code_Like_Aman" />
 
     <!-- Canonical -->
-    <link rel="canonical" href="https://amanraj.dev/" />
+    <link rel="canonical" href="https://aman-0402.github.io/aman.ai/" />
 
     <!-- Favicons -->
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
@@ -69,12 +70,15 @@
         "@type": "Person",
         "name": "Aman Raj",
         "jobTitle": "Full-Stack Developer & AI/ML Expert",
-        "url": "https://amanraj.dev",
+        "url": "https://aman-0402.github.io/aman.ai/",
+        "email": "think.like.ai.aman@gmail.com",
+        "telephone": "+91-9852104967",
         "description": "Web Developer, Python & Machine Learning Expert, MERN Stack Developer, Technical Trainer",
         "sameAs": [
-          "https://github.com/amanraj",
-          "https://linkedin.com/in/amanraj",
-          "https://twitter.com/amanraj"
+          "https://github.com/Aman-0402",
+          "https://www.linkedin.com/in/aman-raj-081905211/",
+          "https://x.com/Code_Like_Aman",
+          "https://www.youtube.com/@Think_Like_Me"
         ],
         "knowsAbout": [
           "React", "Node.js", "Python", "Machine Learning",
@@ -84,27 +88,30 @@
     </script>
 
     <!--
-      SPA Routing Fix for GitHub Pages.
-      Step 2 of 2: Decode the redirect injected by 404.html back into a real URL
-      and push it into browser history BEFORE React Router initialises.
-      Without this, refreshing /projects would render the app at /?/projects
-      instead of /projects, breaking all deep links and shared URLs.
-
+      SPA Routing Fix for GitHub Pages — Step 2 of 2 (the decoder).
       Pairs with: public/404.html (the encoder)
-      Source: https://github.com/rafgraph/spa-github-pages
+
+      Reads the encoded path from the query string (written by 404.html),
+      reconstructs the real URL, and pushes it to browser history BEFORE
+      React Router initialises — so the router sees the correct path.
+
+      Example (subdomain):  /aman.ai/?/projects  →  /aman.ai/projects
+      Example (custom domain): /?/projects       →  /projects
     -->
     <script>
       ;(function (l) {
+        // The encoder writes '?/path' into the query string.
+        // Check that the query starts with '/' to distinguish from real query params.
         if (l.search[1] === '/') {
           var decoded = l.search
-            .slice(1)
-            .split('&')
-            .map(function (s) { return s.replace(/~and~/g, '&') })
-            .join('?')
+            .slice(1)                                    // strip leading '?'
+            .split('&')                                  // separate path from any real params
+            .map(function (s) { return s.replace(/~and~/g, '&') })  // restore encoded &
+            .join('?')                                   // first segment is path, rest are params
           window.history.replaceState(
             null,
             null,
-            l.pathname.slice(0, -1) + decoded + l.hash
+            l.pathname.slice(0, -1) + decoded + l.hash  // rebuild full URL
           )
         }
       })(window.location)
@@ -122,10 +129,10 @@
         }
       })()
     </script>
-    <script type="module" crossorigin src="/assets/index-BEvwDYAH.js"></script>
-    <link rel="modulepreload" crossorigin href="/assets/vendor-Cnx9rnkG.js">
-    <link rel="modulepreload" crossorigin href="/assets/motion-BgdYMpg9.js">
-    <link rel="stylesheet" crossorigin href="/assets/index-BMrkBShh.css">
+    <script type="module" crossorigin src="/assets/index-CTTzfg0n.js"></script>
+    <link rel="modulepreload" crossorigin href="/assets/vendor-jGTeHlyQ.js">
+    <link rel="modulepreload" crossorigin href="/assets/motion-DtN2YLGV.js">
+    <link rel="stylesheet" crossorigin href="/assets/index-8zquJ7Ju.css">
   </head>
   <body class="bg-bg-base text-text-primary font-body antialiased">
     <div id="root"></div>
