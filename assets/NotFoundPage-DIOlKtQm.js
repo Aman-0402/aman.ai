@@ -1,4 +1,4 @@
-import{j as e,m as t}from"./motion-DtN2YLGV.js";import{L as a}from"./vendor-jGTeHlyQ.js";import{P as i}from"./PageLayout-CABTxDT6.js";import{c as o,a as r,f as s}from"./index-D9oIGitC.js";import{A as n}from"./arrow-left-Byo_0Z4x.js";/**
+import{j as e,m as t}from"./motion-DtN2YLGV.js";import{L as a}from"./vendor-jGTeHlyQ.js";import{P as i}from"./PageLayout-9OzfCkdu.js";import{c as o,a as r,f as s}from"./index-B_cqPBTM.js";import{A as n}from"./arrow-left-DANJ5LaK.js";/**
  * @license lucide-react v0.368.0 - ISC
  *
  * This source code is licensed under the ISC license.
