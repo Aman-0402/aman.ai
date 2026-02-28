@@ -184,8 +184,8 @@ export default function KnowledgeHubPage() {
           )}
         </div>
 
-        {/* Category tabs — horizontal scroll on mobile */}
-        <div className="flex gap-2 overflow-x-auto scrollbar-hide pb-2 mb-2">
+        {/* Category tabs — wraps on mobile, single row with visible scroll on desktop */}
+        <div className="flex flex-wrap md:flex-nowrap md:overflow-x-auto gap-2 pb-2 mb-2">
           {categories.map((cat) => (
             <button
               key={cat.id}
