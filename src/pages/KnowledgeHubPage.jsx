@@ -14,8 +14,8 @@ export default function KnowledgeHubPage() {
   const { category: paramCategory } = useParams()
   const navigate = useNavigate()
 
-  const categories = toolsData.categories
-  const defaultCategory = paramCategory || categories[0]?.id
+  const categories = toolsData?.categories || []
+  const defaultCategory = paramCategory || categories[0]?.id || 'ai-llm-tools'
 
   const [activeCategory, setActiveCategory] = useState(defaultCategory)
   const [searchQuery, setSearchQuery] = useState('')
