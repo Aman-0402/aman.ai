@@ -26,6 +26,15 @@ export default function ProjectDetailPage() {
         <h1 className="font-display font-bold text-display-md text-text-primary mb-4">
           {project.title}
         </h1>
+
+        {project.thumbnail && (
+          <img
+            src={project.thumbnail}
+            alt={project.title}
+            className="w-full rounded-xl mb-6 object-cover max-h-72"
+          />
+        )}
+
         <p className="text-text-secondary mb-6">{project.longDesc}</p>
 
         {/* Tech stack */}

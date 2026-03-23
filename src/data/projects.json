@@ -61,5 +61,110 @@
     "year": 2023,
     "duration": "6 weeks",
     "highlights": ["GitHub API integration", "Kanban board", "Pomodoro timer"]
+  },
+  {
+    "id": "project-004",
+    "slug": "echospace-blog",
+    "title": "EchoSpace – Blog Management System",
+    "shortDesc": "Full-stack blog management system for creating, editing, and managing content efficiently.",
+    "longDesc": "Developed a full-stack blog management system enabling users to create, edit, and manage content efficiently. Implemented CRUD operations with structured content handling and scalable architecture. Designed responsive UI for seamless user experience across devices. Built a modular system supporting future enhancements like authentication and user interaction.",
+    "thumbnail": "",
+    "images": [],
+    "techStack": ["HTML", "CSS", "JavaScript"],
+    "categories": ["Web"],
+    "featured": false,
+    "status": "live",
+    "links": {
+      "demo": "",
+      "github": "https://github.com/Aman-0402/EchoSpace-Blog-Management-System-",
+      "caseStudy": ""
+    },
+    "year": 2024,
+    "duration": "",
+    "highlights": ["CRUD operations", "Responsive UI", "Modular architecture"]
+  },
+  {
+    "id": "project-005",
+    "slug": "coursehub",
+    "title": "CourseHub – Online Learning Platform",
+    "shortDesc": "Web-based course platform for structured learning and content management.",
+    "longDesc": "Developed a web-based course platform for structured learning and content management. Designed intuitive UI for browsing courses and accessing learning materials. Implemented responsive design ensuring cross-device compatibility. Built scalable architecture to support future features like user tracking and recommendations.",
+    "thumbnail": "",
+    "images": [],
+    "techStack": ["HTML", "CSS", "JavaScript"],
+    "categories": ["Web"],
+    "featured": false,
+    "status": "live",
+    "links": {
+      "demo": "",
+      "github": "https://github.com/Aman-0402/CourseHub",
+      "caseStudy": ""
+    },
+    "year": 2024,
+    "duration": "",
+    "highlights": ["Course browsing UI", "Responsive design", "Scalable architecture"]
+  },
+  {
+    "id": "project-006",
+    "slug": "foodsphere",
+    "title": "FoodSphere – Food Ordering Web Platform",
+    "shortDesc": "Food platform for exploring restaurants and browsing menus with a responsive UI.",
+    "longDesc": "Built a food platform allowing users to explore restaurants and browse menus. Designed responsive and user-friendly interface for seamless navigation. Implemented categorized listings for better content organization. Structured the system for future integration of ordering and payment features.",
+    "thumbnail": "/assets/images/projects/FoodSphere.png",
+    "images": [],
+    "techStack": ["HTML", "CSS", "JavaScript"],
+    "categories": ["Web"],
+    "featured": false,
+    "status": "live",
+    "links": {
+      "demo": "",
+      "github": "https://github.com/Aman-0402/FoodSphere",
+      "caseStudy": ""
+    },
+    "year": 2024,
+    "duration": "",
+    "highlights": ["Restaurant listings", "Categorized menus", "Responsive design"]
+  },
+  {
+    "id": "project-007",
+    "slug": "consultme",
+    "title": "ConsultMe – Consulting Services Platform",
+    "shortDesc": "Consulting platform to connect users with professional services.",
+    "longDesc": "Developed a consulting platform to connect users with professional services. Designed clean and responsive UI for service exploration and interaction. Implemented structured architecture for scalability and maintainability. Built a foundation for future features like booking and client management.",
+    "thumbnail": "",
+    "images": [],
+    "techStack": ["HTML", "CSS", "JavaScript"],
+    "categories": ["Web"],
+    "featured": false,
+    "status": "live",
+    "links": {
+      "demo": "",
+      "github": "https://github.com/Aman-0402/ConsultMe",
+      "caseStudy": ""
+    },
+    "year": 2024,
+    "duration": "",
+    "highlights": ["Service listings", "Responsive UI", "Scalable architecture"]
+  },
+  {
+    "id": "project-008",
+    "slug": "portfolio",
+    "title": "Personal Portfolio Website (aman.ai)",
+    "shortDesc": "Responsive portfolio showcasing projects, skills, and achievements.",
+    "longDesc": "Built a responsive portfolio to showcase projects, skills, and achievements. Designed modern UI/UX with smooth navigation and structured sections. Optimized performance for multiple devices and screen sizes. Deployed using GitHub Pages for public accessibility.",
+    "thumbnail": "",
+    "images": [],
+    "techStack": ["React", "TailwindCSS", "Vite"],
+    "categories": ["Web"],
+    "featured": false,
+    "status": "live",
+    "links": {
+      "demo": "",
+      "github": "https://github.com/Aman-0402/aman.ai",
+      "caseStudy": ""
+    },
+    "year": 2025,
+    "duration": "",
+    "highlights": ["Modern UI/UX", "GitHub Pages deployment", "Responsive design"]
   }
 ]

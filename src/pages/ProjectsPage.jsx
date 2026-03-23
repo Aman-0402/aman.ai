@@ -1,4 +1,5 @@
 import { useState, useMemo } from 'react'
+import { Link } from 'react-router-dom'
 import PageLayout from '@components/layout/PageLayout'
 import projects from '@data/projects.json'
 
@@ -50,10 +51,18 @@ export default function ProjectsPage() {
         {/* Project grid — cards will be a proper component later */}
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {filtered.map((project) => (
-            <div
+            <Link
               key={project.id}
-              className="rounded-2xl border border-bg-border bg-bg-surface p-6 hover:border-brand-primary/30 transition-all duration-300"
+              to={`/projects/${project.slug}`}
+              className="rounded-2xl border border-bg-border bg-bg-surface p-6 hover:border-brand-primary/30 transition-all duration-300 block"
             >
+              {project.thumbnail && (
+                <img
+                  src={project.thumbnail}
+                  alt={project.title}
+                  className="w-full rounded-lg mb-4 object-cover h-40"
+                />
+              )}
               <h3 className="font-display font-semibold text-text-primary mb-2">
                 {project.title}
               </h3>
@@ -65,7 +74,7 @@ export default function ProjectsPage() {
                   </span>
                 ))}
               </div>
-            </div>
+            </Link>
           ))}
         </div>
       </section>
