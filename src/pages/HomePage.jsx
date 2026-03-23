@@ -260,7 +260,7 @@ export default function HomePage() {
                     <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-brand-primary opacity-75" />
                     <span className="relative inline-flex h-2 w-2 rounded-full bg-brand-primary" />
                   </span>
-                  Site under construction — sections coming soon
+                  Hey Guys, This is my Personal Website and I'm Still Working on it
                 </div>
               </motion.div>
 
@@ -341,7 +341,6 @@ export default function HomePage() {
           animate={{ opacity: 1 }}
           transition={{ delay: 2.4, duration: 0.6 }}
         >
-          <span className="text-[10px] tracking-widest uppercase text-text-muted">scroll</span>
           <motion.div
             className="w-px h-8 origin-top rounded-full"
             style={{ background: 'linear-gradient(to bottom, #6366f1, transparent)' }}
