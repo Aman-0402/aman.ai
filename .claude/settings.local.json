@@ -5,7 +5,9 @@
       "Bash(mv \"FoodSphere - Login.png\" \"login.png\")",
       "Bash(mv \"FoodSphere - Admin Dashboard.png\" \"admin-dashboard.png\")",
       "Bash(mv \"FoodSphere - FoodShop.png\" \"food-shop.png\")",
-      "Bash(mv \"FoodSphere - Menu.png\" \"menu.png\")"
+      "Bash(mv \"FoodSphere - Menu.png\" \"menu.png\")",
+      "Bash(npm run:*)",
+      "Bash(VITE_BASE_PATH=/aman.ai/ npm run build)"
     ]
   }
 }
