@@ -1,7 +1,7 @@
 import { useState, useEffect, useCallback } from 'react'
 import { NavLink, Link, useLocation } from 'react-router-dom'
 import { motion, AnimatePresence } from 'framer-motion'
-import { Menu, X, Download, Moon, Sun } from 'lucide-react'
+import { Menu, X, Moon, Sun } from 'lucide-react'
 import { useTheme } from '@context/ThemeContext'
 import MobileMenu from './MobileMenu'
 import { navbarSlide } from '@animations/variants'
@@ -143,16 +143,16 @@ export default function Navbar() {
               </AnimatePresence>
             </motion.button>
 
-            {/* Resume CTA */}
+            {/* Portfolio CTA */}
             <motion.a
-              href={`${import.meta.env.BASE_URL}assets/downloads/resume.pdf`}
-              download="Aman_Raj_Resume.pdf"
+              href="https://aman-0402.github.io/My-Portfolio/"
+              target="_blank"
+              rel="noopener noreferrer"
               whileHover={{ y: -1 }}
               whileTap={{ scale: 0.96 }}
               className="hidden sm:flex items-center gap-1.5 px-4 py-2 rounded-lg bg-brand-primary text-white text-sm font-medium hover:bg-brand-dark transition-colors duration-200 shadow-glow-primary hover:shadow-glow-lg"
             >
-              <Download size={14} />
-              <span>Resume</span>
+              <span>Portfolio</span>
             </motion.a>
 
             {/* Mobile hamburger */}
