@@ -70,9 +70,13 @@ export default function Navbar() {
             className="flex items-center gap-2 group"
             aria-label="Aman Raj — Home"
           >
-            {/* Gradient ring logo mark */}
-            <div className="relative h-8 w-8 rounded-lg bg-gradient-brand flex items-center justify-center shadow-glow-primary group-hover:shadow-glow-lg transition-shadow duration-300">
-              <span className="font-display font-bold text-sm text-white">A</span>
+            {/* Logo image */}
+            <div className="relative h-8 w-8 rounded-lg overflow-hidden shadow-glow-primary group-hover:shadow-glow-lg transition-shadow duration-300">
+              <img
+                src={`${import.meta.env.BASE_URL}assets/images/Extra/logo.jpg`}
+                alt="Aman Raj Logo"
+                className="h-full w-full object-cover"
+              />
             </div>
             <span className="font-display font-bold text-base text-text-primary">
               Aman<span className="gradient-text">.ai</span>

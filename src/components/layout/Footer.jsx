@@ -93,12 +93,16 @@ export default function Footer() {
             {/* Logo with 3D tilt */}
             <Link to="/" className="inline-flex items-center gap-2.5 group">
               <motion.div
-                className="h-10 w-10 rounded-xl bg-gradient-brand flex items-center justify-center shadow-glow-primary"
+                className="h-10 w-10 rounded-xl overflow-hidden shadow-glow-primary"
                 whileHover={{ rotateY: 25, rotateX: -10, scale: 1.08 }}
                 transition={{ type: 'spring', stiffness: 300, damping: 20 }}
                 style={{ transformPerspective: 600 }}
               >
-                <span className="font-display font-bold text-base text-white">A</span>
+                <img
+                  src={`${import.meta.env.BASE_URL}assets/images/Extra/logo.jpg`}
+                  alt="Aman Raj Logo"
+                  className="h-full w-full object-cover"
+                />
               </motion.div>
               <span className="font-display font-bold text-xl text-text-primary">
                 Aman<span className="gradient-text">.ai</span>
