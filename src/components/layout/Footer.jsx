@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
 import { Github, Linkedin, Twitter, Youtube, Mail, ArrowUpRight } from 'lucide-react'
 import { fadeUp, staggerContainer } from '@animations/variants'
+import { assetUrl } from '@utils/assetUrl'
 import { viewport } from '@animations/transitions'
 
 const FOOTER_LINKS = {
@@ -99,7 +100,7 @@ export default function Footer() {
                 style={{ transformPerspective: 600 }}
               >
                 <img
-                  src={`${window.__BASE__}assets/images/Extra/logo.jpg`}
+                  src={assetUrl('/assets/images/Extra/logo.jpg')}
                   alt="Aman Raj Logo"
                   className="h-full w-full object-cover"
                 />

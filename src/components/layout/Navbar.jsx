@@ -3,6 +3,7 @@ import { NavLink, Link, useLocation } from 'react-router-dom'
 import { motion, AnimatePresence } from 'framer-motion'
 import { Menu, X, Moon, Sun } from 'lucide-react'
 import { useTheme } from '@context/ThemeContext'
+import { assetUrl } from '@utils/assetUrl'
 import MobileMenu from './MobileMenu'
 import { navbarSlide } from '@animations/variants'
 
@@ -73,7 +74,7 @@ export default function Navbar() {
             {/* Logo image */}
             <div className="relative h-8 w-8 rounded-lg overflow-hidden shadow-glow-primary group-hover:shadow-glow-lg transition-shadow duration-300">
               <img
-                src={`${window.__BASE__}assets/images/Extra/logo.jpg`}
+                src={assetUrl('/assets/images/Extra/logo.jpg')}
                 alt="Aman Raj Logo"
                 className="h-full w-full object-cover"
               />
