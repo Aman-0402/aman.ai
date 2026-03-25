@@ -2,6 +2,7 @@ import { useState, useMemo } from 'react'
 import { Link } from 'react-router-dom'
 import PageLayout from '@components/layout/PageLayout'
 import projects from '@data/projects.json'
+import { assetUrl } from '@utils/assetUrl'
 
 const ALL_CATEGORY = 'All'
 
@@ -58,7 +59,7 @@ export default function ProjectsPage() {
             >
               {project.thumbnail && (
                 <img
-                  src={project.thumbnail}
+                  src={assetUrl(project.thumbnail)}
                   alt={project.title}
                   className="w-full rounded-lg mb-4 object-cover h-40"
                 />

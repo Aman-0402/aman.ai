@@ -4,6 +4,7 @@ import ReactMarkdown from 'react-markdown'
 import remarkGfm from 'remark-gfm'
 import PageLayout from '@components/layout/PageLayout'
 import projects from '@data/projects.json'
+import { assetUrl } from '@utils/assetUrl'
 
 export default function ProjectDetailPage() {
   const { slug } = useParams()
@@ -31,7 +32,7 @@ export default function ProjectDetailPage() {
 
         {project.thumbnail && (
           <img
-            src={project.thumbnail}
+            src={assetUrl(project.thumbnail)}
             alt={project.title}
             className="w-full rounded-xl mb-6 object-cover max-h-72"
           />
@@ -49,7 +50,7 @@ export default function ProjectDetailPage() {
               {project.images.map((img, index) => (
                 <img
                   key={index}
-                  src={img}
+                  src={assetUrl(img)}
                   alt={`${project.title} screenshot ${index + 1}`}
                   className="w-full rounded-lg object-cover border border-bg-border"
                 />
