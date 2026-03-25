@@ -1,5 +1,7 @@
 import { useParams, Link, Navigate } from 'react-router-dom'
 import { ArrowLeft, ExternalLink, Github } from 'lucide-react'
+import ReactMarkdown from 'react-markdown'
+import remarkGfm from 'remark-gfm'
 import PageLayout from '@components/layout/PageLayout'
 import projects from '@data/projects.json'
 
@@ -35,7 +37,26 @@ export default function ProjectDetailPage() {
           />
         )}
 
-        <p className="text-text-secondary mb-6">{project.longDesc}</p>
+        <div className="prose prose-sm max-w-none text-text-secondary mb-6 [&_h2]:font-display [&_h2]:font-semibold [&_h2]:text-text-primary [&_h2]:text-lg [&_h2]:mt-6 [&_h2]:mb-2 [&_h3]:font-semibold [&_h3]:text-text-primary [&_h3]:mt-4 [&_h3]:mb-1 [&_ul]:list-disc [&_ul]:pl-5 [&_ul]:space-y-1 [&_li]:text-text-secondary [&_p]:mb-3">
+          <ReactMarkdown remarkPlugins={[remarkGfm]}>{project.longDesc}</ReactMarkdown>
+        </div>
+
+        {/* Image Gallery */}
+        {project.images && project.images.length > 0 && (
+          <div className="mb-8">
+            <h2 className="font-display font-semibold text-text-primary text-lg mb-4">Screenshots</h2>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              {project.images.map((img, index) => (
+                <img
+                  key={index}
+                  src={img}
+                  alt={`${project.title} screenshot ${index + 1}`}
+                  className="w-full rounded-lg object-cover border border-bg-border"
+                />
+              ))}
+            </div>
+          </div>
+        )}
 
         {/* Tech stack */}
         <div className="flex flex-wrap gap-2 mb-8">
