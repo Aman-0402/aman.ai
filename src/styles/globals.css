@@ -22,18 +22,19 @@ html.dark {
 }
 
 html:not(.dark) {
-  --bg-base:     #F8FAFC;
-  --bg-surface:  #FFFFFF;
-  --bg-elevated: #F1F5F9;
-  --bg-border:   #E2E8F0;
+  /* Indigo-mist light theme — tinted, not blinding white */
+  --bg-base:     #ECEAF8;   /* lavender mist */
+  --bg-surface:  #F5F4FF;   /* soft lavender white */
+  --bg-elevated: #E2DFFA;   /* deeper lavender */
+  --bg-border:   #C0BCDF;   /* muted indigo border */
 
-  --text-primary:   #0F172A;
-  --text-secondary: #475569;
-  --text-muted:     #94A3B8;
-  --text-accent:    #6366F1;
+  --text-primary:   #0C0B1E;   /* deep navy-black */
+  --text-secondary: #3E3C60;   /* muted indigo-gray */
+  --text-muted:     #7270A0;   /* soft purple-gray */
+  --text-accent:    #4F46E5;   /* slightly deeper indigo for contrast */
 
-  --scrollbar-thumb: #CBD5E1;
-  --scrollbar-track: #F1F5F9;
+  --scrollbar-thumb: #B8B5D8;
+  --scrollbar-track: #E2DFFA;
 }
 
 /* ─── Base Layer ──────────────────────────────────────────────── */
@@ -116,10 +117,10 @@ html:not(.dark) {
 
   /* Glass card — light */
   html:not(.dark) .glass {
-    background: rgba(255, 255, 255, 0.7);
+    background: rgba(245, 244, 255, 0.75);
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
-    border: 1px solid rgba(0, 0, 0, 0.08);
+    border: 1px solid rgba(99, 102, 241, 0.15);
   }
 
   /* Gradient text */
