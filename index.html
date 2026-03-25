@@ -117,6 +117,9 @@
       })(window.location)
     </script>
 
+    <!-- Base URL for runtime asset resolution (replaced by Vite at build time) -->
+    <script>window.__BASE__ = "%BASE_URL%"</script>
+
     <!-- Theme: prevent flash of wrong theme -->
     <script>
       ;(function () {
