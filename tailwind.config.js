@@ -10,10 +10,10 @@ export default {
       // ─── Color System ────────────────────────────────────────────
       colors: {
         bg: {
-          base:     '#0A0A0F',
-          surface:  '#111118',
-          elevated: '#1A1A25',
-          border:   '#2A2A3A',
+          base:     'var(--bg-base)',
+          surface:  'var(--bg-surface)',
+          elevated: 'var(--bg-elevated)',
+          border:   'var(--bg-border)',
         },
         brand: {
           primary:   '#6366F1',
@@ -21,17 +21,10 @@ export default {
           dark:      '#4F46E5',
         },
         text: {
-          primary:   '#F1F5F9',
-          secondary: '#94A3B8',
-          muted:     '#475569',
-          accent:    '#6366F1',
-        },
-        // Light mode overrides
-        light: {
-          base:     '#F8FAFC',
-          surface:  '#FFFFFF',
-          elevated: '#F1F5F9',
-          border:   '#E2E8F0',
+          primary:   'var(--text-primary)',
+          secondary: 'var(--text-secondary)',
+          muted:     'var(--text-muted)',
+          accent:    'var(--text-accent)',
         },
       },
 

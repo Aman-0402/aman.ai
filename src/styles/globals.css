@@ -2,14 +2,42 @@
 @tailwind components;
 @tailwind utilities;
 
+/* ─── Theme Tokens (CSS Variables) ───────────────────────────── */
+:root,
+html.dark {
+  --bg-base:     #0A0A0F;
+  --bg-surface:  #111118;
+  --bg-elevated: #1A1A25;
+  --bg-border:   #2A2A3A;
+
+  --text-primary:   #F1F5F9;
+  --text-secondary: #94A3B8;
+  --text-muted:     #475569;
+  --text-accent:    #6366F1;
+
+  --scrollbar-thumb: #2a2a3a;
+  --scrollbar-track: #0a0a0f;
+
+  scroll-behavior: smooth;
+}
+
+html:not(.dark) {
+  --bg-base:     #F8FAFC;
+  --bg-surface:  #FFFFFF;
+  --bg-elevated: #F1F5F9;
+  --bg-border:   #E2E8F0;
+
+  --text-primary:   #0F172A;
+  --text-secondary: #475569;
+  --text-muted:     #94A3B8;
+  --text-accent:    #6366F1;
+
+  --scrollbar-thumb: #CBD5E1;
+  --scrollbar-track: #F1F5F9;
+}
+
 /* ─── Base Layer ──────────────────────────────────────────────── */
 @layer base {
-  :root {
-    --scrollbar-thumb: #2a2a3a;
-    --scrollbar-track: #0a0a0f;
-    scroll-behavior: smooth;
-  }
-
   * {
     box-sizing: border-box;
     margin: 0;
@@ -17,21 +45,18 @@
   }
 
   html {
-    @apply font-body text-text-primary;
+    @apply font-body;
+    color: var(--text-primary);
     font-feature-settings: 'rlig' 1, 'calt' 1, 'ss01' 1;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     text-rendering: optimizeLegibility;
   }
 
-  /* Dark mode default */
-  html.dark body {
-    @apply bg-bg-base text-text-primary;
-  }
-
-  html:not(.dark) body {
-    background-color: #f8fafc;
-    color: #0f172a;
+  body {
+    background-color: var(--bg-base);
+    color: var(--text-primary);
+    transition: background-color 0.3s ease, color 0.3s ease;
   }
 
   /* Selection color */
@@ -58,7 +83,8 @@
 
   /* Focus ring */
   :focus-visible {
-    @apply outline-none ring-2 ring-brand-primary ring-offset-2 ring-offset-bg-base;
+    @apply outline-none ring-2 ring-brand-primary ring-offset-2;
+    ring-offset-color: var(--bg-base);
   }
 
   /* Headings */
@@ -80,12 +106,20 @@
 /* ─── Component Layer ─────────────────────────────────────────── */
 @layer components {
 
-  /* Glass card */
+  /* Glass card — dark */
   .glass {
     background: rgba(26, 26, 37, 0.6);
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
     border: 1px solid rgba(255, 255, 255, 0.06);
+  }
+
+  /* Glass card — light */
+  html:not(.dark) .glass {
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(0, 0, 0, 0.08);
   }
 
   /* Gradient text */
@@ -116,10 +150,10 @@
     box-shadow: 0 0 40px rgba(34, 211, 238, 0.25);
   }
 
-  /* Animated gradient border */
+  /* Animated gradient border — dark */
   .gradient-border {
     position: relative;
-    background: linear-gradient(#1a1a25, #1a1a25) padding-box,
+    background: linear-gradient(var(--bg-elevated), var(--bg-elevated)) padding-box,
                 linear-gradient(135deg, #6366f1, #22d3ee) border-box;
     border: 1px solid transparent;
   }
@@ -150,8 +184,8 @@
     @apply border-none;
     background-image: repeating-linear-gradient(
       90deg,
-      #2a2a3a 0,
-      #2a2a3a 4px,
+      var(--bg-border) 0,
+      var(--bg-border) 4px,
       transparent 4px,
       transparent 12px
     );
@@ -203,9 +237,27 @@
   --tw-prose-td-borders:   #2a2a3a;
 }
 
+html:not(.dark) .prose-dark {
+  --tw-prose-body:         #334155;
+  --tw-prose-headings:     #0f172a;
+  --tw-prose-lead:         #475569;
+  --tw-prose-bold:         #0f172a;
+  --tw-prose-hr:           #e2e8f0;
+  --tw-prose-quotes:       #0f172a;
+  --tw-prose-captions:     #64748b;
+  --tw-prose-pre-code:     #0f172a;
+  --tw-prose-pre-bg:       #f1f5f9;
+  --tw-prose-th-borders:   #e2e8f0;
+  --tw-prose-td-borders:   #e2e8f0;
+}
+
 /* ─── Highlight.js theme override ────────────────────────────── */
 .hljs {
   background: #1a1a25 !important;
   border-radius: 0.75rem;
   padding: 1.25rem !important;
+}
+
+html:not(.dark) .hljs {
+  background: #f1f5f9 !important;
 }

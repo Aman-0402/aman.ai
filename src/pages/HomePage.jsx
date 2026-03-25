@@ -205,7 +205,7 @@ export default function HomePage() {
       <section
         ref={sectionRef}
         className="relative flex min-h-screen items-center justify-center overflow-hidden"
-        style={{ background: '#0A0A0F' }}
+        style={{ background: 'var(--bg-base)' }}
       >
         {/* ── Layer 1 : dot grid ──────────────────────────────────────────────── */}
         <div

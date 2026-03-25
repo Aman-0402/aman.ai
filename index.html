@@ -120,15 +120,14 @@
     <!-- Base URL for runtime asset resolution (replaced by Vite at build time) -->
     <script>window.__BASE__ = "%BASE_URL%"</script>
 
-    <!-- Theme: prevent flash of wrong theme -->
+    <!-- Theme: prevent flash of wrong theme — default is dark -->
     <script>
       ;(function () {
         const stored = localStorage.getItem('theme')
-        const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches
-        if (stored === 'dark' || (!stored && prefersDark)) {
-          document.documentElement.classList.add('dark')
-        } else if (stored === 'light') {
+        if (stored === 'light') {
           document.documentElement.classList.remove('dark')
+        } else {
+          document.documentElement.classList.add('dark')
         }
       })()
     </script>
