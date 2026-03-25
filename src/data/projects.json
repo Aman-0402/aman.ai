@@ -127,8 +127,8 @@
       "/assets/images/projects/FoodSphere/order.png",
       "/assets/images/projects/FoodSphere/vendor-confirm.png"
     ],
-    "techStack": ["HTML", "CSS", "JavaScript"],
-    "categories": ["Web"],
+    "techStack": ["Django", "Python", "HTML", "CSS", "JavaScript", "SQLite"],
+    "categories": ["Web", "Python"],
     "featured": false,
     "status": "live",
     "links": {
