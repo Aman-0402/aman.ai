@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(mv \"FoodSphere - Landing page.png\" \"landing-page.png\")",
+      "Bash(mv \"FoodSphere - Login.png\" \"login.png\")",
+      "Bash(mv \"FoodSphere - Admin Dashboard.png\" \"admin-dashboard.png\")",
+      "Bash(mv \"FoodSphere - FoodShop.png\" \"food-shop.png\")",
+      "Bash(mv \"FoodSphere - Menu.png\" \"menu.png\")"
+    ]
+  }
+}
