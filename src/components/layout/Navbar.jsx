@@ -73,7 +73,7 @@ export default function Navbar() {
             {/* Logo image */}
             <div className="relative h-8 w-8 rounded-lg overflow-hidden shadow-glow-primary group-hover:shadow-glow-lg transition-shadow duration-300">
               <img
-                src={`${import.meta.env.BASE_URL}assets/images/Extra/logo.jpg`}
+                src={`${window.__BASE__}assets/images/Extra/logo.jpg`}
                 alt="Aman Raj Logo"
                 className="h-full w-full object-cover"
               />
