@@ -1,0 +1,98 @@
+[
+  {
+    "id": "gallery-001",
+    "title": "AI Resume Builder UI",
+    "category": "Design",
+    "image": "/assets/images/gallery/ai-resume-builder-ui.png",
+    "description": "Dashboard design for the AI-powered resume builder application.",
+    "year": 2024
+  },
+  {
+    "id": "gallery-002",
+    "title": "MERN Stack Architecture Diagram",
+    "category": "Diagrams",
+    "image": "/assets/images/gallery/mern-architecture.png",
+    "description": "System architecture diagram for a full-stack MERN application.",
+    "year": 2024
+  },
+  {
+    "id": "gallery-003",
+    "title": "Machine Learning Workshop",
+    "category": "Events",
+    "image": "/assets/images/gallery/ml-workshop.png",
+    "description": "Conducted a hands-on machine learning workshop for 50+ students.",
+    "year": 2024
+  },
+  {
+    "id": "gallery-004",
+    "title": "TensorFlow Developer Certificate",
+    "category": "Certificates",
+    "image": "/assets/images/gallery/tensorflow-cert.png",
+    "description": "Google TensorFlow Developer Professional Certificate.",
+    "year": 2023
+  },
+  {
+    "id": "gallery-005",
+    "title": "FastAPI Microservices Design",
+    "category": "Design",
+    "image": "/assets/images/gallery/fastapi-microservices.png",
+    "description": "API architecture and endpoint design for a microservices backend.",
+    "year": 2024
+  },
+  {
+    "id": "gallery-006",
+    "title": "React Dashboard Screenshot",
+    "category": "Screenshots",
+    "image": "/assets/images/gallery/react-dashboard.png",
+    "description": "Live screenshot of an analytics dashboard built with React and Recharts.",
+    "year": 2024
+  },
+  {
+    "id": "gallery-007",
+    "title": "Python Bootcamp — Session",
+    "category": "Events",
+    "image": "/assets/images/gallery/python-bootcamp.png",
+    "description": "Teaching Python fundamentals at a college bootcamp event.",
+    "year": 2023
+  },
+  {
+    "id": "gallery-008",
+    "title": "AWS Cloud Practitioner",
+    "category": "Certificates",
+    "image": "/assets/images/gallery/aws-cert.png",
+    "description": "AWS Certified Cloud Practitioner — Foundational level certification.",
+    "year": 2023
+  },
+  {
+    "id": "gallery-009",
+    "title": "Portfolio v1 — Dark Mode",
+    "category": "Screenshots",
+    "image": "/assets/images/gallery/portfolio-v1.png",
+    "description": "First version of the personal portfolio website in dark mode.",
+    "year": 2023
+  },
+  {
+    "id": "gallery-010",
+    "title": "Neural Network Visualization",
+    "category": "Diagrams",
+    "image": "/assets/images/gallery/neural-net-viz.png",
+    "description": "Visual representation of a multi-layer neural network architecture.",
+    "year": 2024
+  },
+  {
+    "id": "gallery-011",
+    "title": "Hackathon — 1st Place",
+    "category": "Events",
+    "image": "/assets/images/gallery/hackathon-win.png",
+    "description": "Won first place at a national-level AI hackathon with an NLP project.",
+    "year": 2024
+  },
+  {
+    "id": "gallery-012",
+    "title": "MongoDB Atlas Data Model",
+    "category": "Diagrams",
+    "image": "/assets/images/gallery/mongo-data-model.png",
+    "description": "NoSQL data model diagram for a multi-tenant SaaS application.",
+    "year": 2024
+  }
+]

@@ -10,7 +10,7 @@ import { navbarSlide } from '@animations/variants'
 const NAV_LINKS = [
   { label: 'About',    href: '/about' },
   { label: 'Projects', href: '/projects' },
-  { label: 'Blog',     href: '/blog' },
+  { label: 'Gallery',  href: '/gallery' },
   { label: 'eBooks',   href: '/ebooks' },
   { label: 'Hub',      href: '/knowledge-hub' },
   { label: 'Services', href: '/services' },

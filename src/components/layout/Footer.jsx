@@ -12,7 +12,7 @@ const FOOTER_LINKS = {
     { label: 'Contact',       href: '/contact' },
   ],
   Content: [
-    { label: 'Blog',          href: '/blog' },
+    { label: 'Gallery',        href: '/gallery' },
     { label: 'eBooks',        href: '/ebooks' },
     { label: 'Knowledge Hub', href: '/knowledge-hub' },
     { label: 'Resources',     href: '/resources' },

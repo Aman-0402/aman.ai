@@ -9,8 +9,7 @@ const HomePage         = lazy(() => import('@pages/HomePage'))
 const AboutPage        = lazy(() => import('@pages/AboutPage'))
 const ProjectsPage     = lazy(() => import('@pages/ProjectsPage'))
 const ProjectDetail    = lazy(() => import('@pages/ProjectDetailPage'))
-const BlogPage         = lazy(() => import('@pages/BlogPage'))
-const BlogPostPage     = lazy(() => import('@pages/BlogPostPage'))
+const GalleryPage      = lazy(() => import('@pages/GalleryPage'))
 const EbooksPage       = lazy(() => import('@pages/EbooksPage'))
 const KnowledgeHubPage = lazy(() => import('@pages/KnowledgeHubPage'))
 const ServicesPage     = lazy(() => import('@pages/ServicesPage'))
@@ -62,18 +61,10 @@ const router = createBrowserRouter(
         ),
       },
       {
-        path: 'blog',
+        path: 'gallery',
         element: (
           <Suspense fallback={<PageLoader />}>
-            <BlogPage />
-          </Suspense>
-        ),
-      },
-      {
-        path: 'blog/:slug',
-        element: (
-          <Suspense fallback={<PageLoader />}>
-            <BlogPostPage />
+            <GalleryPage />
           </Suspense>
         ),
       },
